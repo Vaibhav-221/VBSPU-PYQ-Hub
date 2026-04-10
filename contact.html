@@ -5,8 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | VBSPU PYQ Hub</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+  <!-- BACK BUTTON -->
+  <a href="index.html" class="back-btn" title="Go to Home">
+    <i class="fa-solid fa-house"></i>
+  </a>
 
   <!-- PAGE CONTENT -->
   <div class="page-container contact-page">
@@ -24,11 +30,8 @@
         <p><strong>Phone:</strong> +91 05452-252244</p>
         <p>
           <strong>Main Website:</strong><br>
-          <a href="https://www.vbspu.ac.in/en" target="_blank">
-            www.vbspu.ac.in
-          </a>
+          <a href="https://www.vbspu.ac.in/en" target="_blank">www.vbspu.ac.in</a>
         </p>
-
         <div class="socials">
           <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank">Facebook</a>
           <a href="https://x.com/vbspu_official" target="_blank">Twitter</a>
@@ -40,12 +43,16 @@
       <div class="contact-card">
         <h3>Send a Message</h3>
         <form id="contact-form" class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-          </form>
-          
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit" id="send-btn">
+            <span id="btn-text">Send Message</span>
+            <span id="btn-spinner" style="display:none;">
+              <i class="fa-solid fa-spinner fa-spin"></i> Sending...
+            </span>
+          </button>
+        </form>
       </div>
 
     </div>
@@ -57,38 +64,30 @@
       <div class="logo">
         <img src="logo.png" alt="VBSPU Logo">
       </div>
-
       <div class="quicklink">
         <ul>
           <li id="quick-heading">Quick Links</li>
-          <li class="nav-home"><a href="index.html">Home</a></li>
-          <li  class="nav-btn"><a href="semester.html">PYQs</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="semester.html">PYQs</a></li>
           <li><a href="#">Study Materials</a></li>
         </ul>
       </div>
-
       <div class="contact">
         <h3 id="quick-heading">Contact</h3>
         <p>Email: vc_vbspuniversity@rediffmail.com</p>
         <p>Phone: +91 05452-252244</p>
-        <p>Main Website:
-          <a href="https://www.vbspu.ac.in/en">www.vbspu.ac.in</a>
-        </p>
+        <p>Main Website: <a href="https://www.vbspu.ac.in/en">www.vbspu.ac.in</a></p>
       </div>
     </div>
-
     <div class="footer-bottom">
       &copy; 2025 VBSPU PYQs Hub. All rights reserved. |
       Designed & Developed by
-      <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank">
-        Vaibhav Singh
-      </a>
+      <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank">Vaibhav Singh</a>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script src="contact.js" > </script>
+  <script src="contact.js"></script>
   <script src="script.js"></script>
-
-
 </body>
 </html>
