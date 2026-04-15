@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     pyqsBtn.addEventListener("click", () => {
       window.location.href = "semester.html";
     });
+  
+    
+    
   }
 
   // Navbar links (prevent default to avoid double navigation)
