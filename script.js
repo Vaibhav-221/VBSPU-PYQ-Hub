@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "semester.html";
     });
   }
+  const btnb2 = document.querySelector(".b2");
+  if (btnb2) {
+    btnb2.addEventListener("click", () => {
+      window.location.href = "maintinance.html";
+    });
+  }
 
   // Explore button
   const btn1 = document.querySelector(".explore-btn");
