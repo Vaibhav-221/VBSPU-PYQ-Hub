@@ -22,12 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
   ],
 
   3: [
+    "COA",
     "DSTL",
     "Data Structure",
     "Cyber Security",
     "Universal Human Values",
-    "Digital Electronics",
-    "Computer Organization & Architecture",
+    "Digital Electronics"
+    
   ],
 
   4: [
