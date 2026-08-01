@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
   ],
 
   3: [
-    "Discrete Mathematics",
-    "Object Oriented Programming (Java)",
+    "DSTL",
+    "Data Structure",
     "Computer Organization & Architecture",
-    "Operating Systems",
+    "Digital Electronics",
     "Universal Human Values"
   ],
 
