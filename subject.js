@@ -24,9 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
   3: [
     "DSTL",
     "Data Structure",
-    "Computer Organization & Architecture",
+    "Cyber Security",
+    "Universal Human Values",
     "Digital Electronics",
-    "Universal Human Values"
+    "Computer Organization & Architecture",
   ],
 
   4: [
