@@ -7,8 +7,12 @@
     <title>VBSPU PYQ Hub</title>
 
     <!-- Google Font (Stylish + Professional) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Geist:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
     <link href="./dist/output.css" rel="stylesheet">
@@ -17,12 +21,14 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-[#09090b] text-[#fafafa] selection:bg-[#a78bfa] selection:text-[#0a0012] min-h-screen flex flex-col antialiased">
+<body
+    class="bg-[#09090b] text-[#fafafa] selection:bg-[#a78bfa] selection:text-[#0a0012] min-h-screen flex flex-col antialiased">
 
     <!-- ========================================== -->
     <!-- Nav Bar (old classes kept, new styling)     -->
     <!-- ========================================== -->
-    <nav class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+    <nav
+        class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
 
         <!-- Left Section -->
         <div class="nav-left flex items-center gap-2.5">
@@ -33,7 +39,8 @@
         <!-- Search (new, no old equivalent) -->
         <div class="hidden lg:flex items-center flex-1 max-w-xs mx-8">
             <div class="relative w-full">
-                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-sm text-[#a1a1aa]">search</span>
+                <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-sm text-[#a1a1aa]">search</span>
                 <input type="text" id="global-search" placeholder="Search papers & subjects..."
                     class="w-full pl-9 pr-4 py-2 bg-[#121215] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-lg text-xs text-white placeholder:text-[#a1a1aa]/60 transition-all">
             </div>
@@ -42,17 +49,22 @@
         <!-- Right Section -->
         <ul class="nav-links hidden md:flex items-center gap-6">
             <li class="nav-home"><a href="#hero" class="text-sm font-semibold text-[#a78bfa]">Home</a></li>
-            <li class="nav-btn"><a href="semester.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
-            <li class="script-btn"><a href="contact.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
+            <li class="nav-btn"><a href="semester.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
+            <li class="script-btn"><a href="contact.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a>
+            </li>
             <li class="nav-download">
-                <a href="#" class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                <a href="#"
+                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
                     Download App
                 </a>
             </li>
         </ul>
 
         <!-- Mobile Hamburger (new, hooks left for script.js) -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#a1a1aa] hover:text-white rounded-lg focus:outline-none" aria-label="Toggle menu">
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#a1a1aa] hover:text-white rounded-lg focus:outline-none"
+            aria-label="Toggle menu">
             <span class="material-symbols-outlined text-2xl">menu</span>
         </button>
     </nav>
@@ -60,12 +72,17 @@
     <!-- ========================================== -->
     <!-- Download Confirmation Modal (old ids kept)  -->
     <!-- ========================================== -->
-    <div class="modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" id="downloadModal">
-        <div class="modal-content bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-sm p-6 shadow-2xl text-center space-y-5">
-            <p class="text-sm text-[#fafafa]">Are you sure you want to download the <strong class="text-[#a78bfa]">VBSPU PYQ Hub</strong> app?</p>
+    <div class="modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+        id="downloadModal">
+        <div
+            class="modal-content bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-sm p-6 shadow-2xl text-center space-y-5">
+            <p class="text-sm text-[#fafafa]">Are you sure you want to download the <strong class="text-[#a78bfa]">VBSPU
+                    PYQ Hub</strong> app?</p>
             <div class="flex items-center justify-center gap-3">
-                <button class="cancel flex-1 py-2.5 rounded-lg border border-[#27272a] bg-[#18181b] text-white text-xs font-bold hover:bg-[#27272a] transition-all">Cancel</button>
-                <button class="download flex-1 py-2.5 rounded-lg bg-[#a78bfa] text-[#0a0012] text-xs font-bold hover:brightness-110 transition-all">Download</button>
+                <button
+                    class="cancel flex-1 py-2.5 rounded-lg border border-[#27272a] bg-[#18181b] text-white text-xs font-bold hover:bg-[#27272a] transition-all">Cancel</button>
+                <button
+                    class="download flex-1 py-2.5 rounded-lg bg-[#a78bfa] text-[#0a0012] text-xs font-bold hover:brightness-110 transition-all">Download</button>
             </div>
         </div>
     </div>
@@ -75,28 +92,36 @@
         <!-- ========================================== -->
         <!-- Hero Section (old classes kept)             -->
         <!-- ========================================== -->
-        <div class="hero-sec relative overflow-hidden py-12 md:py-20 lg:py-24 border-b border-[#27272a] grid md:grid-cols-2 items-center gap-12 lg:gap-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div
+            class="hero-sec relative overflow-hidden py-12 md:py-20 lg:py-24 border-b border-[#27272a] grid md:grid-cols-2 items-center gap-12 lg:gap-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             <div class="disc text-center md:text-left space-y-6">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold">
                     <span class="material-symbols-outlined text-sm">verified</span>
                     <span>Official University Repository</span>
                 </div>
 
-                <h1 class="heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
-                    Prepare Smarter with <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#c4b5fd]">VBSPU PYQs</span>
+                <h1
+                    class="heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
+                    Prepare Smarter with <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#c4b5fd]">VBSPU
+                        PYQs</span>
                 </h1>
 
-                <h6 class="heading-6 text-base sm:text-lg text-[#a1a1aa] leading-relaxed max-w-xl mx-auto md:mx-0 font-normal">
+                <h6
+                    class="heading-6 text-base sm:text-lg text-[#a1a1aa] leading-relaxed max-w-xl mx-auto md:mx-0 font-normal">
                     Exams become easier when you practice the right questions.
                     VBSPU PYQ Hub provides easy access to authentic previous year question papers,
                     helping students understand exam patterns, important topics, and marking schemes.
                 </h6>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
-                    <a href="semester.html" class="w-full sm:w-auto bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-base px-8 py-3.5 rounded-lg transition-all text-center shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                    <a href="semester.html"
+                        class="w-full sm:w-auto bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-base px-8 py-3.5 rounded-lg transition-all text-center shadow-lg shadow-[#a78bfa]/20 active:scale-95">
                         Get Started
                     </a>
-                    <a href="#button-sec" class="w-full sm:w-auto border border-[#27272a] bg-[#121215] hover:bg-[#18181b] text-white font-semibold text-base px-8 py-3.5 rounded-lg transition-all text-center active:scale-95">
+                    <a href="#button-sec"
+                        class="w-full sm:w-auto border border-[#27272a] bg-[#121215] hover:bg-[#18181b] text-white font-semibold text-base px-8 py-3.5 rounded-lg transition-all text-center active:scale-95">
                         Learn More
                     </a>
                 </div>
@@ -114,7 +139,8 @@
         <!-- Stats strip (new)                           -->
         <!-- ========================================== -->
         <section class="py-12 bg-[#0f0f12] border-b border-[#27272a]">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-around items-center gap-8 md:gap-16">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap justify-around items-center gap-8 md:gap-16">
                 <div class="text-center">
                     <div class="text-3xl sm:text-4xl font-extrabold text-[#a78bfa]">1000+</div>
                     <div class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa] mt-1">Authentic Papers</div>
@@ -133,23 +159,32 @@
         <!-- ========================================== -->
         <!-- Card Section (old classes kept: button-sec, card, card-img, card-content, b1, b2) -->
         <!-- ========================================== -->
-        <div id="button-sec" class="button-sec py-16 md:py-24 bg-[#09090b] border-b border-[#27272a] grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div id="button-sec"
+            class="button-sec py-16 md:py-24 bg-[#09090b] border-b border-[#27272a] grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
+            <div
+                class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
                 <img src="pyqs.png" alt="Card Image" class="card-img w-36 h-36 mb-6 object-contain">
                 <div class="card-content">
                     <h2 class="text-2xl font-bold text-white mb-3">PYQs are here</h2>
-                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to explore more about PYQs and get started!</p>
-                    <button class="b1 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">PYQs</button>
+                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to explore
+                        more about PYQs and get started!</p>
+                    <button
+                        class="b1 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">PYQs</button>
                 </div>
             </div>
 
-            <div class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
-                <img id="img2" src="Stydy Materials.png" alt="Card Image" class="card-img w-36 h-36 mb-6 object-contain">
+            <div
+                class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
+                <img id="img2" src="Stydy Materials.png" alt="Card Image"
+                    class="card-img w-36 h-36 mb-6 object-contain">
                 <div class="card-content">
                     <h2 class="text-2xl font-bold text-white mb-3">Access Study Materials</h2>
-                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to download and view all the study materials for your courses.</p>
-                    <button class="b2 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">Study Materials</button>
+                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to download
+                        and view all the study materials for your courses.</p>
+                    <button
+                        class="b2 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">Study
+                        Materials</button>
                 </div>
             </div>
         </div>
@@ -157,35 +192,142 @@
         <!-- ========================================== -->
         <!-- Resource Explorer (new)                     -->
         <!-- ========================================== -->
-        <section id="resources-explorer" class="py-16 md:py-20 bg-[#0f0f12] border-b border-[#27272a]">
+        <section id="resources-explorer" class="py-16 md:py-20 bg-[#0f0f12] border-b border-[#27272a">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
-                    <div>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Resource Library & Search</h2>
-                        <p class="text-xs sm:text-sm text-[#a1a1aa] mt-1">Filter by category, course department, or subject keyword.</p>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-[#121215] p-1.5 rounded-xl border border-[#27272a]">
-                        <button id="tab-all" class="px-4 py-2 rounded-lg text-xs font-bold bg-[#a78bfa] text-[#0a0012] transition-all">All Resources</button>
-                        <button id="tab-pyq" class="px-4 py-2 rounded-lg text-xs font-medium text-[#a1a1aa] hover:text-white hover:bg-[#18181b] transition-all">PYQ Papers</button>
-                        <button id="tab-mat" class="px-4 py-2 rounded-lg text-xs font-medium text-[#a1a1aa] hover:text-white hover:bg-[#18181b] transition-all">Study Notes</button>
-                    </div>
-                </div>
+                <!-- ========================================== -->
+                <!-- Need Assistance Section                     -->
+                <!-- ========================================== -->
+                <section id="need-assistance" class="py-16 md:py-24 bg-[#09090b] border-b border-[#27272a]">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <div class="relative sm:col-span-2">
-                        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-sm text-[#a1a1aa]">search</span>
-                        <input type="text" id="resource-search" placeholder="Search by subject name (e.g. Data Structures, Chemistry, Math)..."
-                            class="w-full pl-10 pr-4 py-3 bg-[#121215] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/50">
+                            <!-- Left Info Column -->
+                            <div class="space-y-8">
+                                <div>
+                                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Need Assistance?
+                                    </h2>
+                                    <p class="text-sm sm:text-base text-[#a1a1aa] leading-relaxed max-w-lg">
+                                        Our academic support team is here to help you find the right resources for your
+                                        success. Reach out to us through any of the following channels.
+                                    </p>
+                                </div>
+
+                                <!-- Contact Methods -->
+                                <div class="space-y-6">
+
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            <span class="material-symbols-outlined">mail</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
+                                                Email Support</p>
+                                            <a href="mailto:vc_vbspuniversity@rediffmail.com"
+                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors break-all">
+                                                vc_vbspuniversity@rediffmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            <span class="material-symbols-outlined">call</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
+                                                Phone Assistance</p>
+                                            <a href="tel:+9105452252244"
+                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors">
+                                                +91 05452-252244
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start gap-4">
+                                        <div
+                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            <span class="material-symbols-outlined">language</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
+                                                Official Website</p>
+                                            <a href="http://www.vbspu.ac.in" target="_blank" rel="noopener noreferrer"
+                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors">
+                                                www.vbspu.ac.in
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- Social Links -->
+                                <div class="pt-2 flex items-center gap-3">
+                                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank"
+                                        rel="noopener"
+                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">FB</a>
+                                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener"
+                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">TW</a>
+                                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener"
+                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">IG</a>
+                                </div>
+                            </div>
+
+                            <!-- Right Form Column -->
+                            <div class="bg-[#121215] p-6 sm:p-8 lg:p-10 rounded-2xl border border-[#27272a] shadow-2xl">
+                                <form id="assist-form" class="space-y-5">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                        <div class="space-y-1.5">
+                                            <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
+                                                for="assist-name">Full Name</label>
+                                            <input type="text" id="assist-name" name="name" placeholder="Student Name"
+                                                required
+                                                class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
+                                        </div>
+                                        <div class="space-y-1.5">
+                                            <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
+                                                for="assist-email">Email Address</label>
+                                            <input type="email" id="assist-email" name="email"
+                                                placeholder="example@email.com" required
+                                                class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-1.5">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
+                                            for="assist-dept">Department / Course</label>
+                                        <select id="assist-dept" name="department"
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white transition-colors">
+                                            <option>B.Tech Engineering</option>
+                                            <option>B.Sc Science</option>
+                                            <option>Commerce & Management</option>
+                                            <option>BCA / MCA</option>
+                                            <option>Other Departments</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="space-y-1.5">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
+                                            for="assist-message">Your Message</label>
+                                        <textarea id="assist-message" name="message" rows="4"
+                                            placeholder="How can we help you find your question papers or study material?"
+                                            required
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors resize-none"></textarea>
+                                    </div>
+
+                                    <button type="submit"
+                                        class="w-full py-4 bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-extrabold rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg shadow-[#a78bfa]/20 active:scale-[0.98]">
+                                        Send Message
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
                     </div>
-                    <select id="course-filter" class="w-full px-4 py-3 bg-[#121215] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white">
-                        <option value="ALL">All Departments & Courses</option>
-                        <option value="B.Tech CS">B.Tech Computer Science</option>
-                        <option value="B.Sc">B.Sc Science (Math / Chem / Physics)</option>
-                        <option value="B.Com">B.Com Commerce</option>
-                        <option value="BCA">BCA Computer Applications</option>
-                        <option value="MBA">MBA Business Admin</option>
-                    </select>
-                </div>
+                </section>
+
+                
 
                 <div id="resources-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Populated dynamically via script.js -->
@@ -196,24 +338,30 @@
         <!-- ========================================== -->
         <!-- PDF Preview Modal (new, id kept as-is for JS to hook) -->
         <!-- ========================================== -->
-        <div id="pdf-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
-            <div class="bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+        <div id="pdf-modal"
+            class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4">
+            <div
+                class="bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
                 <div class="px-6 py-4 border-b border-[#27272a] flex items-center justify-between bg-[#18181b]">
                     <div>
                         <h3 id="pdf-modal-title" class="font-bold text-base text-white">Document Title</h3>
                         <p id="pdf-modal-details" class="text-xs text-[#a1a1aa] mt-0.5">Details...</p>
                     </div>
-                    <button id="close-pdf-modal" class="text-[#a1a1aa] hover:text-white p-1 rounded-lg hover:bg-[#27272a] transition-colors">
+                    <button id="close-pdf-modal"
+                        class="text-[#a1a1aa] hover:text-white p-1 rounded-lg hover:bg-[#27272a] transition-colors">
                         <span class="material-symbols-outlined">close</span>
                     </button>
                 </div>
-                <div class="p-6 overflow-y-auto flex-grow flex flex-col items-center justify-center min-h-[300px] bg-[#09090b] text-center">
+                <div
+                    class="p-6 overflow-y-auto flex-grow flex flex-col items-center justify-center min-h-[300px] bg-[#09090b] text-center">
                     <h4 class="text-lg font-bold text-white mb-2">VBSPU Verified Exam Paper</h4>
-                    <p class="text-xs text-[#a1a1aa] max-w-md mb-6">This document is optimized for digital viewing and high-resolution printing.</p>
+                    <p class="text-xs text-[#a1a1aa] max-w-md mb-6">This document is optimized for digital viewing and
+                        high-resolution printing.</p>
                 </div>
                 <div class="px-6 py-4 border-t border-[#27272a] bg-[#18181b] flex items-center justify-between">
                     <span class="text-xs text-[#a1a1aa]">Free Open Academic Download</span>
-                    <button id="pdf-modal-download" class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-6 py-2.5 rounded-lg transition-all">
+                    <button id="pdf-modal-download"
+                        class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-6 py-2.5 rounded-lg transition-all">
                         Download PDF Paper
                     </button>
                 </div>
@@ -226,33 +374,48 @@
     <!-- Footer (old classes kept)                   -->
     <!-- ========================================== -->
     <footer class="bg-[#0f0f12] text-[#fafafa] pt-16 pb-12 border-t border-[#27272a]">
-        <div class="footer max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left mb-12">
+        <div
+            class="footer max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left mb-12">
 
             <div class="logo flex flex-col items-center md:items-start space-y-4">
                 <img src="logo.png" alt="" class="h-16 w-16 bg-[#18181b] p-2 rounded-2xl border border-[#27272a]">
                 <h2 class="font-bold text-xl text-[#a78bfa]">VBSPU PYQ Hub</h2>
-                <p class="text-[#a1a1aa] text-xs max-w-xs leading-relaxed">Empowering students with accessible academic resources, authentic previous year papers, and faculty lecture notes.</p>
+                <p class="text-[#a1a1aa] text-xs max-w-xs leading-relaxed">Empowering students with accessible academic
+                    resources, authentic previous year papers, and faculty lecture notes.</p>
             </div>
 
             <div class="quicklink">
                 <ul class="space-y-3">
-                    <li id="quick-heading" class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Quick Links</li>
-                    <li class="nav-home"><a href="#hero" class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Home</a></li>
-                    <li><a href="semester.html" class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
-                    <li class="study-material"><a href="#resources-explorer" class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Study Materials</a></li>
-                    <li><a href="contact.html" class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
+                    <li id="quick-heading" class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Quick
+                        Links</li>
+                    <li class="nav-home"><a href="#hero"
+                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Home</a></li>
+                    <li><a href="semester.html"
+                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
+                    <li class="study-material"><a href="#resources-explorer"
+                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Study Materials</a>
+                    </li>
+                    <li><a href="contact.html"
+                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="contact">
                 <h3 id="quick-heading" class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Contact</h3>
-                <p class="text-xs text-[#a1a1aa] mb-1.5">Email: <a href="mailto:vc_vbspuniversity@rediffmail.com" class="hover:text-[#a78bfa] transition-colors">vc_vbspuniversity@rediffmail.com</a></p>
-                <p class="text-xs text-[#a1a1aa] mb-1.5">Phone: <a href="tel:+9105452252244" class="hover:text-[#a78bfa] transition-colors">+91 05452-252244</a></p>
-                <p class="text-xs text-[#a1a1aa] mb-3">Main Website: <a href="https://www.vbspu.ac.in/en" target="_blank" rel="noopener noreferrer" class="text-[#a78bfa] hover:underline">www.vbspu.ac.in</a></p>
+                <p class="text-xs text-[#a1a1aa] mb-1.5">Email: <a href="mailto:vc_vbspuniversity@rediffmail.com"
+                        class="hover:text-[#a78bfa] transition-colors">vc_vbspuniversity@rediffmail.com</a></p>
+                <p class="text-xs text-[#a1a1aa] mb-1.5">Phone: <a href="tel:+9105452252244"
+                        class="hover:text-[#a78bfa] transition-colors">+91 05452-252244</a></p>
+                <p class="text-xs text-[#a1a1aa] mb-3">Main Website: <a href="https://www.vbspu.ac.in/en"
+                        target="_blank" rel="noopener noreferrer"
+                        class="text-[#a78bfa] hover:underline">www.vbspu.ac.in</a></p>
                 <div class="socials text-xs text-[#a1a1aa] space-x-1">
-                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener" class="hover:text-[#a78bfa] transition-colors">FB</a> |
-                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener" class="hover:text-[#a78bfa] transition-colors">TW</a> |
-                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener" class="hover:text-[#a78bfa] transition-colors">IG</a>
+                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener"
+                        class="hover:text-[#a78bfa] transition-colors">FB</a> |
+                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener"
+                        class="hover:text-[#a78bfa] transition-colors">TW</a> |
+                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener"
+                        class="hover:text-[#a78bfa] transition-colors">IG</a>
                 </div>
             </div>
 
@@ -262,7 +425,8 @@
                 <form id="newsletter-form" class="flex items-center">
                     <input type="email" placeholder="Email address" required
                         class="w-full px-3.5 py-2.5 bg-[#121215] border border-[#27272a] border-r-0 rounded-l-xl text-xs text-white placeholder:text-[#a1a1aa]/50 focus:outline-none focus:border-[#a78bfa]">
-                    <button type="submit" class="bg-[#a78bfa] text-[#0a0012] px-4 py-2.5 rounded-r-xl hover:brightness-110 transition-colors font-bold">
+                    <button type="submit"
+                        class="bg-[#a78bfa] text-[#0a0012] px-4 py-2.5 rounded-r-xl hover:brightness-110 transition-colors font-bold">
                         <span class="material-symbols-outlined text-sm">send</span>
                     </button>
                 </form>
@@ -270,9 +434,11 @@
 
         </div>
 
-        <div class="footer-bottom border-t border-[#27272a] pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#a1a1aa] gap-4">
+        <div
+            class="footer-bottom border-t border-[#27272a] pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#a1a1aa] gap-4">
             &copy; 2025 VBSPU PYQs Hub. All rights reserved. | Designed & Developed by
-            <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank" class="text-[#a78bfa] hover:underline font-semibold">
+            <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank"
+                class="text-[#a78bfa] hover:underline font-semibold">
                 Vaibhav Singh
             </a>
         </div>
@@ -281,20 +447,24 @@
     <!-- ========================================== -->
     <!-- BottomNavBar (Mobile Only, new)             -->
     <!-- ========================================== -->
-    <nav class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#0f0f12]/95 backdrop-blur-md border-t border-[#27272a] flex justify-around items-center py-2 px-3 shadow-2xl">
+    <nav
+        class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#0f0f12]/95 backdrop-blur-md border-t border-[#27272a] flex justify-around items-center py-2 px-3 shadow-2xl">
         <a href="#hero" class="flex flex-col items-center justify-center text-[#a78bfa] px-3 py-1">
             <span class="material-symbols-outlined text-xl">home</span>
             <span class="text-[10px] font-bold mt-0.5">Home</span>
         </a>
-        <a href="#resources-explorer" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+        <a href="#resources-explorer"
+            class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
             <span class="material-symbols-outlined text-xl">description</span>
             <span class="text-[10px] font-bold mt-0.5">PYQs</span>
         </a>
-        <a href="#button-sec" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+        <a href="#button-sec"
+            class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
             <span class="material-symbols-outlined text-xl">menu_book</span>
             <span class="text-[10px] font-bold mt-0.5">Materials</span>
         </a>
-        <a href="contact.html" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+        <a href="contact.html"
+            class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
             <span class="material-symbols-outlined text-xl">contact_support</span>
             <span class="text-[10px] font-bold mt-0.5">Contact</span>
         </a>
