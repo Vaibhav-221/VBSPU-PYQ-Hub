@@ -1,53 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Select Subject | VBSPU PYQ Hub</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8924330440884548"
      crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-[#09090b] text-[#fafafa] selection:bg-[#a78bfa] selection:text-[#0a0012] min-h-screen flex flex-col antialiased">
 
-  <nav class="nav-bar">
-    <!-- Left Section -->
-    <div class="nav-left">
-        <img src="logo.png" alt="VBSPU Logo">
-        <span class="site-name">VBSPU PYQ Hub</span>
+  <!-- ========================================== -->
+  <!-- NAVBAR (same structure/classes as index.html / semester.html) -->
+  <!-- ========================================== -->
+  <nav class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+
+    <div class="nav-left flex items-center gap-2.5">
+      <img src="logo.png" alt="VBSPU Logo" class="h-10 w-10 rounded-xl object-contain">
+      <span class="site-name font-bold text-lg md:text-xl tracking-tight text-white">VBSPU PYQ Hub</span>
     </div>
 
-    <!-- Right Section -->
-    <ul class="nav-links">
-                <li class="nav-download"><a href="#">Download App</a></li>
-        <li class="nav-home"><a href="#">Home</a></li>
-        <li  class="nav-btn" ><a href="#">PYQs</a></li>
-        <li class="script-btn"><a href="#">Contact Us</a></li>
+    <ul class="nav-links hidden md:flex items-center gap-6">
+      <li class="nav-home"><a href="index.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Home</a></li>
+      <li class="nav-btn"><a href="semester.html" class="text-sm font-semibold text-[#a78bfa]">PYQs</a></li>
+      <li class="script-btn"><a href="contact.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
+      <li class="nav-download">
+        <a href="#" class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+          Download App
+        </a>
+      </li>
     </ul>
-</nav>
 
-<!-- Download Confirmation Modal -->
-<div class="modal" id="downloadModal">
-  <div class="modal-content">
-    <p>Are you sure you want to download the <strong>VBSPU PYQ Hub</strong> app?</p>
-    <button class="cancel">Cancel</button>
-    <button class="download">Download</button>
-  </div>
-</div>
+    <button id="mobile-menu-btn" class="md:hidden p-2 text-[#a1a1aa] hover:text-white rounded-lg focus:outline-none" aria-label="Toggle menu">
+      <span class="material-symbols-outlined text-2xl">menu</span>
+    </button>
+  </nav>
 
-    <div class="page-container">
-      <h1 class="page-title">Select Subject</h1>
-      <p id="sem-title" class="page-subtitle"></p>
-  
-      <div id="subject-list" class="subject-grid">
-        <!-- Subjects will be injected here -->
+  <!-- ========================================== -->
+  <!-- Download Confirmation Modal (same as index.html / semester.html) -->
+  <!-- ========================================== -->
+  <div class="modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" id="downloadModal">
+    <div class="modal-content bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-sm p-6 shadow-2xl text-center space-y-5">
+      <p class="text-sm text-[#fafafa]">Are you sure you want to download the <strong class="text-[#a78bfa]">VBSPU PYQ Hub</strong> app?</p>
+      <div class="flex items-center justify-center gap-3">
+        <button class="cancel flex-1 py-2.5 rounded-lg border border-[#27272a] bg-[#18181b] text-white text-xs font-bold hover:bg-[#27272a] transition-all">Cancel</button>
+        <button class="download flex-1 py-2.5 rounded-lg bg-[#a78bfa] text-[#0a0012] text-xs font-bold hover:brightness-110 transition-all">Download</button>
       </div>
     </div>
-  
-    <script src="subject.js"></script>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
-  
+  <!-- ========================================== -->
+  <!-- PAGE CONTENT (old classes kept: page-container, page-title, page-subtitle, subject-grid) -->
+  <!-- ========================================== -->
+  <main class="flex-grow pt-28 md:pt-32 pb-20">
+    <div class="page-container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-4 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold">
+          <span class="material-symbols-outlined text-sm">menu_book</span>
+          <span>Browse by Subject</span>
+        </div>
+        <h1 class="page-title text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white">
+          Select <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#a78bfa] to-[#c4b5fd]">Subject</span>
+        </h1>
+        <p id="sem-title" class="page-subtitle text-sm sm:text-base text-[#a1a1aa] max-w-xl mx-auto font-medium"></p>
+      </div>
+
+      <div id="subject-list" class="subject-grid mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Subjects will be injected here by subject.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================== -->
+  <!-- BottomNavBar (Mobile Only, matches index.html / semester.html) -->
+  <!-- ========================================== -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#0f0f12]/95 backdrop-blur-md border-t border-[#27272a] flex justify-around items-center py-2 px-3 shadow-2xl">
+    <a href="index.html" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+      <span class="material-symbols-outlined text-xl">home</span>
+      <span class="text-[10px] font-bold mt-0.5">Home</span>
+    </a>
+    <a href="semester.html" class="flex flex-col items-center justify-center text-[#a78bfa] px-3 py-1">
+      <span class="material-symbols-outlined text-xl">description</span>
+      <span class="text-[10px] font-bold mt-0.5">PYQs</span>
+    </a>
+    <a href="index.html#resources-explorer" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+      <span class="material-symbols-outlined text-xl">menu_book</span>
+      <span class="text-[10px] font-bold mt-0.5">Materials</span>
+    </a>
+    <a href="contact.html" class="flex flex-col items-center justify-center text-[#a1a1aa] hover:text-[#a78bfa] transition-colors px-3 py-1">
+      <span class="material-symbols-outlined text-xl">contact_support</span>
+      <span class="text-[10px] font-bold mt-0.5">Contact</span>
+    </a>
+  </nav>
+
+  <script src="subject.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
