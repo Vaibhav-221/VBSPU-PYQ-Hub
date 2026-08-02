@@ -506,6 +506,9 @@
     margin-inline-start: calc(var(--spacing) * var(--tw-space-x-reverse));
     margin-inline-end: calc(var(--spacing) * calc(1 - var(--tw-space-x-reverse)));
   }
+  .self-center {
+    align-self: center;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
