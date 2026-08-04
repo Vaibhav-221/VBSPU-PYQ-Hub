@@ -192,37 +192,61 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- Card Section (old classes kept: button-sec, card, card-img, card-content, b1, b2) -->
+        <!-- Card Section (old classes kept: button-sec, card, card-content, b1, b2) -->
         <!-- ========================================== -->
-        <div id="button-sec"
-            class="button-sec py-16 md:py-24 bg-[#09090b] border-b border-[#27272a] grid md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="button-sec" class="button-sec resource-section">
+            <div class="resource-section-inner">
+                <div class="resource-section-header">
+                    <span class="resource-eyebrow">Academic resources</span>
+                    <h2>Choose what you need next</h2>
+                    <p>Jump straight into previous year papers or organized study resources built for repeated exam preparation.</p>
+                </div>
 
-            <div
-                class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
-                <img src="pyqs.png" alt="Card Image" class="card-img w-36 h-36 mb-6 object-contain">
-                <div class="card-content">
-                    <h2 class="text-2xl font-bold text-white mb-3">PYQs are here</h2>
-                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to explore
-                        more about PYQs and get started!</p>
-                    <button
-                        class="b1 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">PYQs</button>
+                <div class="resource-card-grid">
+                    <div class="card resource-card resource-card-pyq">
+                        <div class="resource-visual" aria-hidden="true">
+                            <span class="material-symbols-outlined resource-main-icon">description</span>
+                            <span class="resource-sheet sheet-one"></span>
+                            <span class="resource-sheet sheet-two"></span>
+                            <span class="resource-scan-line"></span>
+                            <span class="resource-mini-icon mini-one material-symbols-outlined">quiz</span>
+                            <span class="resource-mini-icon mini-two material-symbols-outlined">history_edu</span>
+                        </div>
+
+                        <div class="card-content resource-card-content">
+                            <span class="resource-card-label">Previous papers</span>
+                            <h3>PYQs are here</h3>
+                            <p>Browse authentic VBSPU previous year question papers by course, semester, and subject.</p>
+                            <button class="b1 resource-action">
+                                <span>Explore PYQs</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card resource-card resource-card-study">
+                        <div class="resource-visual" aria-hidden="true">
+                            <span class="material-symbols-outlined resource-main-icon">auto_stories</span>
+                            <span class="resource-sheet sheet-one"></span>
+                            <span class="resource-sheet sheet-two"></span>
+                            <span class="resource-scan-line"></span>
+                            <span class="resource-mini-icon mini-one material-symbols-outlined">menu_book</span>
+                            <span class="resource-mini-icon mini-two material-symbols-outlined">school</span>
+                        </div>
+
+                        <div class="card-content resource-card-content">
+                            <span class="resource-card-label">Notes and materials</span>
+                            <h3>Access Study Materials</h3>
+                            <p>Find useful notes, references, and preparation material for your university courses.</p>
+                            <button class="b2 resource-action">
+                                <span>Study Materials</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div
-                class="card bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 transition-all duration-300 p-8 sm:p-10 rounded-2xl flex flex-col items-center text-center">
-                <img id="img2" src="Stydy Materials.png" alt="Card Image"
-                    class="card-img w-36 h-36 mb-6 object-contain">
-                <div class="card-content">
-                    <h2 class="text-2xl font-bold text-white mb-3">Access Study Materials</h2>
-                    <p class="text-sm text-[#a1a1aa] mb-8 leading-relaxed max-w-sm">Click the button below to download
-                        and view all the study materials for your courses.</p>
-                    <button
-                        class="b2 w-full sm:w-auto bg-[#18181b] border border-[#27272a] hover:bg-[#a78bfa] hover:text-[#0a0012] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300">Study
-                        Materials</button>
-                </div>
-            </div>
-        </div>
+        </section>
 
         <!-- ========================================== -->
         <!-- Resource Explorer (new)                     -->
