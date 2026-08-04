@@ -59,11 +59,16 @@
     <!-- ========================================== -->
     <!-- PAGE CONTENT (old classes kept: container, page-title, card-grid, semester-card) -->
     <!-- ========================================== -->
-    <main class="flex-grow pt-28 md:pt-32 pb-20">
+    <main class="relative flex-grow overflow-hidden pt-28 md:pt-32 pb-20">
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+            <div class="absolute -top-24 right-[-8rem] h-72 w-72 rounded-full bg-[#a78bfa]/10 blur-3xl"></div>
+            <div class="absolute top-80 left-[-10rem] h-72 w-72 rounded-full bg-[#22d3ee]/5 blur-3xl"></div>
+        </div>
+
         <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="text-center mb-12 sm:mb-16 space-y-4">
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold">
+            <div class="relative text-center mb-12 sm:mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b]/90 border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold shadow-lg shadow-black/20">
                     <span class="material-symbols-outlined text-sm">calendar_month</span>
                     <span>Choose Your Academic Term</span>
                 </div>
@@ -75,62 +80,86 @@
                 </p>
             </div>
 
-            <div class="card-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="card-grid relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">1</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 1</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">1st Year</p>
-                    <button id="sem-1" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">01</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">1st Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 1</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Start with first term question papers and core foundation subjects.</p>
+                    <button id="sem-1" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">2</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 2</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">1st Year</p>
-                    <button id="sem-2" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">02</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">1st Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 2</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Continue first year preparation with semester-wise paper access.</p>
+                    <button id="sem-2" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">3</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 3</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">2nd Year</p>
-                    <button id="sem-3" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">03</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">2nd Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 3</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Move into second year subjects with organized PYQ browsing.</p>
+                    <button id="sem-3" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">4</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 4</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">2nd Year</p>
-                    <button id="sem-4" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">04</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">2nd Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 4</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Review previous papers for mid-course preparation and revision.</p>
+                    <button id="sem-4" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">5</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 5</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">3rd Year</p>
-                    <button id="sem-5" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">05</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">3rd Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 5</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Access advanced semester papers for focused exam practice.</p>
+                    <button id="sem-5" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">6</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 6</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">3rd Year</p>
-                    <button id="sem-6" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">06</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">3rd Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 6</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Prepare with later-year papers and subject-specific patterns.</p>
+                    <button id="sem-6" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">7</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 7</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">4th Year</p>
-                    <button id="sem-7" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">07</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">4th Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 7</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Browse final-year papers for deep practice and revision planning.</p>
+                    <button id="sem-7" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
-                <div class="semester-card group relative bg-[#121215] border border-[#27272a] hover:border-[#a78bfa]/60 rounded-2xl p-6 text-center flex flex-col items-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
-                    <div class="w-14 h-14 mb-4 rounded-xl bg-[#7c3aed]/15 border border-[#7c3aed]/30 flex items-center justify-center text-[#a78bfa] text-xl font-extrabold group-hover:scale-105 group-hover:bg-[#7c3aed]/25 transition-all">8</div>
-                    <h3 class="text-lg font-bold text-white mb-1">Semester 8</h3>
-                    <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">4th Year</p>
-                    <button id="sem-8" class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300">View PYQs</button>
+                <div class="semester-card group relative overflow-hidden bg-[#121215]/95 border border-[#27272a] hover:border-[#a78bfa]/70 rounded-lg p-5 text-left flex min-h-[210px] flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#a78bfa]/10">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-[#7c3aed]/15 border border-[#7c3aed]/30 text-[#c4b5fd] text-lg font-extrabold group-hover:bg-[#7c3aed]/25 transition-all">08</div>
+                        <span class="rounded-full border border-[#27272a] bg-[#18181b] px-3 py-1 text-[11px] font-bold uppercase tracking-widest text-[#a1a1aa]">4th Year</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Semester 8</h3>
+                    <p class="text-sm text-[#a1a1aa] leading-relaxed mb-5">Finish strong with final semester PYQs and exam pattern checks.</p>
+                    <button id="sem-8" class="mt-auto inline-flex w-full items-center justify-between gap-3 rounded-lg border border-[#27272a] bg-[#18181b] px-4 py-3 text-sm font-bold text-white transition-all duration-300 group-hover:border-[#a78bfa] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012]">View PYQs <span class="material-symbols-outlined text-lg">arrow_forward</span></button>
                 </div>
 
             </div>

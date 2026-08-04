@@ -652,8 +652,9 @@ dotlottie-wc {
     }
 
     .footer-bottom {
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
+        gap: 1px;
     }
 }
 
