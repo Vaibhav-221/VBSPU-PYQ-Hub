@@ -16,7 +16,38 @@ dotlottie-wc {
     height: 100% !important;
 }
 
-/* dotlottie-wc canvas {
-    transform: scale(1.4);
-    transform-origin: center;
-} */
+.hero-img {
+    display: none !important;
+}
+
+@media (min-width: 640px) {
+    .hero-img {
+        display: flex !important;
+    }
+
+    .hero-animation-frame {
+        width: min(92vw, 520px) !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-animation-frame {
+        width: min(88vw, 640px) !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    }
+
+    .hero-animation-frame {
+        width: min(52vw, 720px) !important;
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero-animation-frame {
+        width: min(48vw, 760px) !important;
+    }
+}
