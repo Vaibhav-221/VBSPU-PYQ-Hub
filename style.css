@@ -42,12 +42,12 @@ dotlottie-wc {
     }
 
     .hero-animation-frame {
-        width: min(52vw, 720px) !important;
+        width: min(52vw, 500px) !important;
     }
 }
 
 @media (min-width: 1280px) {
     .hero-animation-frame {
-        width: min(48vw, 760px) !important;
+        width: min(48vw, 590px) !important;
     }
 }
