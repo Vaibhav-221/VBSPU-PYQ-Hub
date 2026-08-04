@@ -10,3 +10,13 @@
     animation: float 4s ease-in-out infinite;
     animation-delay: 1.5s;
 }
+dotlottie-wc {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* dotlottie-wc canvas {
+    transform: scale(1.4);
+    transform-origin: center;
+} */
