@@ -432,74 +432,62 @@
     <!-- ========================================== -->
     <!-- Footer (old classes kept)                   -->
     <!-- ========================================== -->
-    <footer class="bg-[#0f0f12] text-[#fafafa] pt-16 pb-12 border-t border-[#27272a]">
-        <div
-            class="footer max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left mb-12">
+    <footer class="footer-section">
+        <div class="footer footer-inner">
 
-            <div class="logo flex flex-col items-center md:items-start space-y-4">
-                <img src="logo.png" alt="" class="h-16 w-16 bg-[#18181b] p-2 rounded-2xl border border-[#27272a]">
-                <h2 class="font-bold text-xl text-[#a78bfa]">VBSPU PYQ Hub</h2>
-                <p class="text-[#a1a1aa] text-xs max-w-xs leading-relaxed">Empowering students with accessible academic
-                    resources, authentic previous year papers, and faculty lecture notes.</p>
-            </div>
-
-            <div class="quicklink">
-                <ul class="space-y-3">
-                    <li id="quick-heading" class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Quick
-                        Links</li>
-                    <li class="nav-home"><a href="#hero"
-                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Home</a></li>
-                    <li><a href="semester.html"
-                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
-                    <li class="study-material"><a href="#resources-explorer"
-                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Study Materials</a>
-                    </li>
-                    <li><a href="contact.html"
-                            class="text-xs text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="contact">
-                <h3 id="quick-heading" class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Contact</h3>
-                <p class="text-xs text-[#a1a1aa] mb-1.5">Email: <a href="mailto:vc_vbspuniversity@rediffmail.com"
-                        class="hover:text-[#a78bfa] transition-colors">vc_vbspuniversity@rediffmail.com</a></p>
-                <p class="text-xs text-[#a1a1aa] mb-1.5">Phone: <a href="tel:+9105452252244"
-                        class="hover:text-[#a78bfa] transition-colors">+91 05452-252244</a></p>
-                <p class="text-xs text-[#a1a1aa] mb-3">Main Website: <a href="https://www.vbspu.ac.in/en"
-                        target="_blank" rel="noopener noreferrer"
-                        class="text-[#a78bfa] hover:underline">www.vbspu.ac.in</a></p>
-                <div class="socials text-xs text-[#a1a1aa] space-x-1">
-                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener"
-                        class="hover:text-[#a78bfa] transition-colors">FB</a> |
-                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener"
-                        class="hover:text-[#a78bfa] transition-colors">TW</a> |
-                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener"
-                        class="hover:text-[#a78bfa] transition-colors">IG</a>
+            <div class="logo footer-brand">
+                <div class="footer-brand-mark" aria-hidden="true">
+                    <span class="material-symbols-outlined">history_edu</span>
+                    <span class="footer-mark-pulse"></span>
+                </div>
+                <div>
+                    <h2>VBSPU PYQ Hub</h2>
+                    <p>Accessible academic resources, authentic previous year papers, and exam-ready study support for VBSPU students.</p>
                 </div>
             </div>
 
-            <div class="newsletter">
-                <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-white mb-3">Newsletter</h3>
-                <p class="text-xs text-[#a1a1aa] mb-4">Stay updated whenever new exam papers are uploaded.</p>
-                <form id="newsletter-form" class="flex items-center">
-                    <input type="email" placeholder="Email address" required
-                        class="w-full px-3.5 py-2.5 bg-[#121215] border border-[#27272a] border-r-0 rounded-l-xl text-xs text-white placeholder:text-[#a1a1aa]/50 focus:outline-none focus:border-[#a78bfa]">
-                    <button type="submit"
-                        class="bg-[#a78bfa] text-[#0a0012] px-4 py-2.5 rounded-r-xl hover:brightness-110 transition-colors font-bold">
-                        <span class="material-symbols-outlined text-sm">send</span>
+            <nav class="quicklink footer-column" aria-label="Footer quick links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li class="nav-home"><a href="#hero">Home</a></li>
+                    <li><a href="semester.html">PYQs</a></li>
+                    <li class="study-material"><a href="#resources-explorer">Study Materials</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <div class="contact footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li><span class="material-symbols-outlined">mail</span><a href="mailto:vc_vbspuniversity@rediffmail.com">vc_vbspuniversity@rediffmail.com</a></li>
+                    <li><span class="material-symbols-outlined">call</span><a href="tel:+9105452252244">+91 05452-252244</a></li>
+                    <li><span class="material-symbols-outlined">language</span><a href="https://www.vbspu.ac.in/en" target="_blank" rel="noopener noreferrer">www.vbspu.ac.in</a></li>
+                </ul>
+                <div class="socials footer-socials" aria-label="Social links">
+                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener" aria-label="X">X</a>
+                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                </div>
+            </div>
+
+            <div class="newsletter footer-column footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Stay updated whenever new exam papers are uploaded.</p>
+                <form id="newsletter-form" class="footer-newsletter-form">
+                    <label class="sr-only" for="footer-email">Email address</label>
+                    <input id="footer-email" type="email" placeholder="Email address" required>
+                    <button type="submit" aria-label="Subscribe">
+                        <span class="material-symbols-outlined">send</span>
                     </button>
                 </form>
             </div>
 
         </div>
 
-        <div
-            class="footer-bottom border-t border-[#27272a] pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#a1a1aa] gap-4">
-            &copy; 2025 VBSPU PYQs Hub. All rights reserved. | Designed & Developed by
-            <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank"
-                class="text-[#a78bfa] hover:underline font-semibold">
-                Vaibhav Singh
-            </a>
+        <div class="footer-bottom">
+            <span>&copy; 2025 VBSPU PYQs Hub. All rights reserved.</span>
+            <span>Designed & Developed by <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank" rel="noopener noreferrer">Vaibhav Singh</a></span>
+            <span><a href="#" class="footer-advertiser-link">Advertised by Vansh Gupta</a></span>
         </div>
     </footer>
 
