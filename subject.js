@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  document.getElementById("sem-title").innerText =
-    `Subjects for Semester ${semester}`;
+  
 
   const subjectsBySemester = {
     1: ["FEC", "FME", "Chemistry", "Soft Skill", "Mathmatics-I"],
