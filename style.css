@@ -464,11 +464,13 @@ dotlottie-wc {
     flex: 0 0 auto;
     width: 4rem;
     height: 4rem;
-    border: 1px solid rgba(167, 139, 250, 0.36);
-    border-radius: 8px;
-    background: #18181b;
-    color: #c4b5fd;
+    /* background: #18181b; */
+    /* color: #c4b5fd; */
     box-shadow: 0 16px 42px rgba(0, 0, 0, 0.28);
+}
+.bottom-logo{
+    border: 1px solid #a78bfa;
+    border-radius: 12px;
 }
 
 .footer-brand-mark .material-symbols-outlined {
