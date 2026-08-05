@@ -20,41 +20,46 @@
     <!-- ========================================== -->
     <!-- NAVBAR (same structure/classes as index.html) -->
     <!-- ========================================== -->
-    <nav class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+       <nav
+        class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
 
+        <!-- Left Section -->
         <div class="nav-left flex items-center gap-2.5">
-            <img src="logo.png" alt="VBSPU Logo" class="h-10 w-10 rounded-xl object-contain">
-            <span class="site-name font-bold text-lg md:text-xl tracking-tight text-white">VBSPU PYQ Hub</span>
+            <img src="new_logo.png" alt="VBSPU Logo" class="h-10 w-10 rounded-xl object-contain">
+            <span class="site-name font-bold text-lg md:text-xl tracking-tight text-white ">VBSPU PYQ Hub</span>
         </div>
 
+
+        <!-- Right Section -->
         <ul class="nav-links hidden md:flex items-center gap-6">
-            <li class="nav-home"><a href="index.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Home</a></li>
-            <li class="nav-btn"><a href="semester.html" class="text-sm font-semibold text-[#a78bfa]">PYQs</a></li>
-            <li class="script-btn"><a href="contact.html" class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">Contact Us</a></li>
-            <li class="nav-download">
-                <a href="#" class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
-                    Download App
+            <li class="nav-home"><a href="#hero" class="text-sm font-semibold text-[#a78bfa]">Home</a></li>
+            <li class="nav-btn"><a href="semester.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
+            <li class="script-btn">
+                <a href="contact.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">
+                    Contact Us
+                </a>
+            </li>
+            <li class="nav-support">
+                <a href="#"
+                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                    Support Us
                 </a>
             </li>
         </ul>
 
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-[#a1a1aa] hover:text-white rounded-lg focus:outline-none" aria-label="Toggle menu">
-            <span class="material-symbols-outlined text-2xl">menu</span>
+        <!-- Mobile Support us btn added (new, hooks left for script.js) -->
+        <button id="mobile-menu-btn" class="md:hidden  nav-support"
+            aria-label="Toggle menu">
+           <a href="#"
+                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-4 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                    Support Us
+                </a>
         </button>
     </nav>
 
-    <!-- ========================================== -->
-    <!-- Download Confirmation Modal (same as index.html) -->
-    <!-- ========================================== -->
-    <div class="modal fixed inset-0 z-[100] hidden items-center justify-center bg-black/70 backdrop-blur-sm p-4" id="downloadModal">
-        <div class="modal-content bg-[#121215] border border-[#27272a] rounded-2xl w-full max-w-sm p-6 shadow-2xl text-center space-y-5">
-            <p class="text-sm text-[#fafafa]">Are you sure you want to download the <strong class="text-[#a78bfa]">VBSPU PYQ Hub</strong> app?</p>
-            <div class="flex items-center justify-center gap-3">
-                <button class="cancel flex-1 py-2.5 rounded-lg border border-[#27272a] bg-[#18181b] text-white text-xs font-bold hover:bg-[#27272a] transition-all">Cancel</button>
-                <button class="download flex-1 py-2.5 rounded-lg bg-[#a78bfa] text-[#0a0012] text-xs font-bold hover:brightness-110 transition-all">Download</button>
-            </div>
-        </div>
-    </div>
+  
 
     <!-- ========================================== -->
     <!-- PAGE CONTENT (old classes kept: container, page-title, card-grid, semester-card) -->
