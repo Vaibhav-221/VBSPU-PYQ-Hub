@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support Us · VBSPU PYQ Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Geist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          base: '#09090b',
+          surface: '#0f0f12',
+          card: '#121215',
+          input: '#18181b',
+          line: '#27272a',
+          muted: '#a1a1aa',
+          accent: '#a78bfa',
+          'accent-soft': '#c4b5fd',
+          'accent-ink': '#0a0012',
+        },
+        fontFamily: {
+          heading: ['Poppins', 'sans-serif'],
+          body: ['Geist', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<style>
+  body { font-family: 'Geist', sans-serif; }
+  h1, h2, h3, .heading-font { font-family: 'Poppins', sans-serif; }
+  ::selection { background: #a78bfa; color: #0a0012; }
+  .amount-highlight {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #a78bfa, #c4b5fd);
+  }
+  #typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    vertical-align: -0.15em;
+    margin-left: 2px;
+    background: #a78bfa;
+    animation: blink 0.9s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    #typing-cursor { animation: none; }
+  }
+</style>
+</head>
+
+<body class="bg-base text-[#fafafa] min-h-screen flex flex-col antialiased">
+
+ <!-- ========================================== -->
+    <!-- NAVBAR (same structure/classes as index.html) -->
+    <!-- ========================================== -->
+       <nav
+        class="nav-bar fixed top-0 left-0 right-0 z-50 bg-[#0f0f12]/80 backdrop-blur-md border-b border-[#27272a] transition-all duration-300 h-16 md:h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+
+        <!-- Left Section -->
+        <div class="nav-left flex items-center gap-2.5">
+            <img src="new_logo.png" alt="VBSPU Logo" class="h-10 w-10 rounded-xl object-contain">
+            <span class="site-name font-bold text-lg md:text-xl tracking-tight text-white ">VBSPU PYQ Hub</span>
+        </div>
+
+
+        <!-- Right Section -->
+        <ul class="nav-links hidden md:flex items-center gap-6">
+            <li class="nav-home"><a href="#hero" class="text-sm font-semibold text-[#a78bfa]">Home</a></li>
+            <li class="nav-btn"><a href="semester.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">PYQs</a></li>
+            <li class="script-btn">
+                <a href="contact.html"
+                    class="text-sm font-medium text-[#a1a1aa] hover:text-[#a78bfa] transition-colors">
+                    Contact Us
+                </a>
+            </li>
+            <li class="nav-support">
+                <a href="#"
+                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                    Support Us
+                </a>
+            </li>
+        </ul>
+
+        <!-- Mobile Support us btn added (new, hooks left for script.js) -->
+        <button id="mobile-menu-btn" class="md:hidden  nav-support"
+            aria-label="Toggle menu">
+           <a href="#"
+                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-4 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                    Support Us
+                </a>
+        </button>
+    </nav>
+
+<main class="flex-grow pt-16 md:pt-20">
+
+  <!-- ========================================== -->
+  <!-- Clarity block: what this page is -->
+  <!-- ========================================== -->
+  <section class="relative overflow-hidden py-14 md:py-20 border-b border-line">
+    <div class="pointer-events-none absolute inset-0 overflow-hidden">
+      <div class="absolute top-0 right-[-10%] w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-500/10 border border-blue-400/30 text-blue-300 rounded-full text-xs font-semibold mb-6">
+        <span class="material-symbols-outlined text-sm text-blue-400">verified</span>
+        VBSPU PYQ Hub is 100% free for students
+      </div>
+
+      <h1 id="rotating-heading" aria-live="polite"
+          class="heading-font text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-white h-[5.2rem] sm:h-[6rem] lg:h-[7.8rem] flex items-center justify-center overflow-hidden">
+        <span class="block"><span id="rotating-heading-text"></span><span id="typing-cursor" aria-hidden="true">&nbsp;</span></span>
+      </h1>
+
+      <p class="mt-4 text-sm sm:text-base text-muted leading-relaxed">
+        Nothing on this site is locked. This isn't a payment for access — every PYQ stays free whether you pay or not.
+        This button just exists for the one person actually building and running this.
+      </p>
+
+      <!-- Familiar reference point -->
+      <p class="mt-4 text-sm text-accent-soft font-medium">
+        ₹19 — about the price of one cup of chai. That's the whole ask.
+      </p>
+
+      <a id="razorpay-btn" href="https://razorpay.me/@vbspuhub"
+         class="mt-8 inline-flex items-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
+        ❤️ Pay ₹19 to Support
+      </a>
+
+      <p class="mt-3 text-xs text-muted">Want to give more or less? You can enter any amount on the payment page.</p>
+
+      <!-- Personal signature -->
+      <div class="mt-8 inline-flex items-center gap-3 px-4 py-2.5 bg-input border border-line rounded-full">
+        <span class="flex items-center justify-center w-7 h-7 rounded-full bg-accent text-accent-ink text-xs font-bold heading-font shrink-0">V</span>
+        <span class="text-xs text-muted text-left">Built &amp; maintained solo — not a company, just a VBSPU student.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- Why ₹19 -->
+  <!-- ========================================== -->
+  <section class="py-14 md:py-16">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="heading-font text-xl sm:text-2xl font-bold text-white text-center mb-8">
+        Why we're asking, even though it's free
+      </h2>
+
+      <div class="bg-card border border-line rounded-2xl divide-y divide-line overflow-hidden">
+        <div class="flex items-center gap-4 px-5 py-4">
+          <span class="material-symbols-outlined text-accent">language</span>
+          <div>
+            <p class="text-sm font-semibold text-white">Domain cost</p>
+            <p class="text-xs text-muted">The vbspuhub address itself is a yearly bill.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 px-5 py-4">
+          <span class="material-symbols-outlined text-accent">dns</span>
+          <div>
+            <p class="text-sm font-semibold text-white">Hosting cost</p>
+            <p class="text-xs text-muted">Every paper you view or download is served from a live server, every month.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 px-5 py-4">
+          <span class="material-symbols-outlined text-accent">storage</span>
+          <div>
+            <p class="text-sm font-semibold text-white">Server cost</p>
+            <p class="text-xs text-muted">More students using the site means more load — and a bigger bill to keep it fast.</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 px-5 py-4">
+          <span class="material-symbols-outlined text-accent">build</span>
+          <div>
+            <p class="text-sm font-semibold text-white">Maintenance cost</p>
+            <p class="text-xs text-muted">Bugs, broken links, new papers to upload — all handled by one student, unpaid.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-muted mt-6">
+        ₹19 from everyone who can spare it keeps this free for everyone who can't.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- Second CTA -->
+  <!-- ========================================== -->
+  <section class="pb-16 md:pb-20">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <a href="https://razorpay.me/@vbspuhub"
+         class="inline-flex items-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
+        ❤️ Pay ₹19 to Support
+      </a>
+      <p class="mt-3 text-xs text-muted">Secure payment via Razorpay · No sign-up · No account needed</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================================== -->
+<!-- Dummy footer — replace with your real one -->
+<!-- ========================================== -->
+<footer class="border-t border-line bg-surface py-6">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-muted">
+    &copy; 2025 VBSPU PYQs Hub. All rights reserved. <!-- dummy footer, replace with your real footer -->
+  </div>
+</footer>
+
+<script>
+(function () {
+  const headlines = [
+    'Help keep VBSPU PYQ Hub free — ₹19 at a time',
+    'Free for everyone. Supported by students like you',
+    'Found your PYQ? Support the platform with ₹19',
+    'Your ₹19 helps keep VBSPU PYQ Hub free for every student',
+    'Every ₹19 helps build a better VBSPU PYQ Hub'
+  ];
+
+  function withHighlight(text) {
+    return text.replace(/₹19/g, '<span class="amount-highlight">₹19</span>');
+  }
+
+  function start() {
+    const headingEl = document.getElementById('rotating-heading-text');
+    if (!headingEl) return;
+
+    const TYPE_MS = 55;     // ms per character while typing
+    const DELETE_MS = 28;   // ms per character while deleting
+    const PAUSE_AFTER_TYPE = 1800;
+    const PAUSE_AFTER_DELETE = 350;
+
+    let headlineIndex = 0;
+    let phase = 'typing';   // 'typing' | 'holding' | 'deleting' | 'waiting'
+    let charIndex = 0;
+    let phaseStart = performance.now();
+
+    function tick(now) {
+      const full = headlines[headlineIndex];
+      const elapsed = now - phaseStart;
+
+      if (phase === 'typing') {
+        const targetChar = Math.min(full.length, Math.floor(elapsed / TYPE_MS));
+        if (targetChar !== charIndex) {
+          charIndex = targetChar;
+          headingEl.textContent = full.slice(0, charIndex);
+        }
+        if (charIndex >= full.length) {
+          headingEl.innerHTML = withHighlight(full);
+          phase = 'holding';
+          phaseStart = now;
+        }
+      } else if (phase === 'holding') {
+        if (elapsed >= PAUSE_AFTER_TYPE) {
+          phase = 'deleting';
+          charIndex = full.length;
+          phaseStart = now;
+        }
+      } else if (phase === 'deleting') {
+        const targetChar = Math.max(0, full.length - Math.floor(elapsed / DELETE_MS));
+        if (targetChar !== charIndex) {
+          charIndex = targetChar;
+          headingEl.textContent = full.slice(0, charIndex);
+        }
+        if (charIndex <= 0) {
+          phase = 'waiting';
+          phaseStart = now;
+        }
+      } else if (phase === 'waiting') {
+        if (elapsed >= PAUSE_AFTER_DELETE) {
+          headlineIndex = (headlineIndex + 1) % headlines.length;
+          charIndex = 0;
+          phase = 'typing';
+          phaseStart = now;
+        }
+      }
+
+      requestAnimationFrame(tick);
+    }
+
+    requestAnimationFrame(tick);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start);
+  } else {
+    start();
+  }
+})();
+</script>
+
+</body>
+</html>
