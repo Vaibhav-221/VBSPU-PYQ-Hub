@@ -47,47 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Download modal logic
-  const navDownload = document.querySelector(".nav-download a");
-  const modal = document.getElementById("downloadModal");
-
-  if (navDownload && modal) {
-    const cancelBtn = modal.querySelector('.cancel');
-    const downloadBtn = modal.querySelector('.download');
-
-    navDownload.addEventListener('click', (e) => {
-      e.preventDefault();
-      modal.style.display = 'block';
-    });
-
-    cancelBtn?.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-
-    downloadBtn?.addEventListener('click', async () => {
-      modal.style.display = 'none';
-
-      try {
-        const response = await fetch('VBSPU%20PYQ%20Hub.apk');
-        if (!response.ok) throw new Error('Network response was not ok');
-
-        const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'VBSPU-PYQ-Hub.apk';
-
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-
-        URL.revokeObjectURL(url);
-      } catch (err) {
-        console.error('Download failed:', err);
-        alert('Failed to download the app. Please try again later.');
-      }
-    });
-  }
-
 });
