@@ -54,6 +54,10 @@
     background: #a78bfa;
     animation: blink 0.9s steps(1) infinite;
   }
+  #rotating-heading {
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
   @keyframes blink { 50% { opacity: 0; } }
   @media (prefers-reduced-motion: reduce) {
     #typing-cursor { animation: none; }
@@ -117,13 +121,13 @@
 
     <div class="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-500/10 border border-blue-400/30 text-blue-300 rounded-full text-xs font-semibold mb-6">
-        <span class="material-symbols-outlined text-sm text-blue-400">verified</span>
+      <div class="inline-flex max-w-full flex-wrap items-center justify-center gap-2 px-3.5 py-1.5 bg-accent/10 border border-accent/30 text-accent-soft rounded-full text-center text-xs font-semibold mb-6">
+        <span class="material-symbols-outlined text-sm text-accent">verified</span>
         VBSPU PYQ Hub is 100% free for students
       </div>
 
       <h1 id="rotating-heading" aria-live="polite"
-          class="heading-font text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-white h-[5.2rem] sm:h-[6rem] lg:h-[7.8rem] flex items-center justify-center overflow-hidden">
+          class="heading-font min-h-[9.5rem] sm:min-h-[7.2rem] lg:min-h-[8.6rem] text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.18] text-white flex items-center justify-center">
         <span class="block"><span id="rotating-heading-text"></span><span id="typing-cursor" aria-hidden="true">&nbsp;</span></span>
       </h1>
 
@@ -138,16 +142,16 @@
       </p>
 
       <a id="razorpay-btn" href="https://razorpay.me/@vbspuhub"
-         class="mt-8 inline-flex items-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
+         class="mt-8 inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-6 sm:px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
         ❤️ Pay ₹19 to Support
       </a>
 
       <p class="mt-3 text-xs text-muted">Want to give more or less? You can enter any amount on the payment page.</p>
 
       <!-- Personal signature -->
-      <div class="mt-8 inline-flex items-center gap-3 px-4 py-2.5 bg-input border border-line rounded-full">
+      <div class="mt-8 inline-flex max-w-full items-center gap-3 px-4 py-2.5 bg-input border border-line rounded-2xl sm:rounded-full">
         <span class="flex items-center justify-center w-7 h-7 rounded-full bg-accent text-accent-ink text-xs font-bold heading-font shrink-0">V</span>
-        <span class="text-xs text-muted text-left">Built &amp; maintained solo — not a company, just a VBSPU student.</span>
+        <span class="min-w-0 text-xs text-muted text-left">Built &amp; maintained solo — not a company, just a VBSPU student.</span>
       </div>
     </div>
   </section>
@@ -204,7 +208,7 @@
   <section class="pb-16 md:pb-20">
     <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <a href="https://razorpay.me/@vbspuhub"
-         class="inline-flex items-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
+         class="inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-accent hover:brightness-110 text-accent-ink font-bold text-base px-6 sm:px-10 py-4 rounded-lg transition-all shadow-lg shadow-accent/20 active:scale-95">
         ❤️ Pay ₹19 to Support
       </a>
       <p class="mt-3 text-xs text-muted">Secure payment via Razorpay · No sign-up · No account needed</p>
