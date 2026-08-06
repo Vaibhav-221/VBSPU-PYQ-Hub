@@ -665,3 +665,16 @@ dotlottie-wc {
         animation: none;
     }
 }
+
+
+.text-base-custom {
+  font-size: 1rem;      /* 16px */
+  line-height: 1.5rem;  /* 24px */
+}
+
+@media (min-width: 640px) {
+  .sm-text-base-custom {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
