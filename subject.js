@@ -1,4 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const navigateAfterTap = (button, url) => {
+    if (window.playSiteButtonTap) {
+      window.playSiteButtonTap(button, () => {
+        window.location.href = url;
+      });
+      return;
+    }
+
+    window.setTimeout(() => {
+      window.location.href = url;
+    }, 180);
+  };
+
   const params = new URLSearchParams(window.location.search);
   const semester = params.get("semester");
 
@@ -86,16 +99,19 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
       <h3 class="text-base font-bold text-white mb-1">${subject}</h3>
       <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">Semester ${semester}</p>
-      <button class="mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300 flex items-center justify-center gap-1.5">
+      <button type="button" class="mt-auto w-full bg-[#a78bfa]/15 border border-[#a78bfa]/35 group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-[#ede9fe] px-5 py-2.5 rounded-lg font-bold text-xs transition-all duration-300 flex items-center justify-center gap-1.5">
         <span>View PYQs</span>
         <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </button>
     `;
 
-    card.querySelector("button").addEventListener("click", () => {
+    card.querySelector("button").addEventListener("click", (event) => {
+      event.preventDefault();
       const subjectKey = subject.toLowerCase().replace(/\s+/g, "-");
-      window.location.href =
-        `papers.html?semester=${semester}&subject=${subjectKey}`;
+      navigateAfterTap(
+        event.currentTarget,
+        `papers.html?semester=${semester}&subject=${subjectKey}`
+      );
     });
 
     subjectList.appendChild(card);

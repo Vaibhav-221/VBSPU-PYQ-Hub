@@ -88,15 +88,15 @@ dotlottie-wc {
     }
 }
 
-@keyframes resourceTapPulse {
+@keyframes siteButtonTapPulse {
     0% {
-        opacity: 0.48;
+        opacity: 0.42;
         transform: translate(-50%, -50%) scale(1);
     }
 
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(18);
+        transform: translate(-50%, -50%) scale(16);
     }
 }
 
@@ -332,28 +332,54 @@ dotlottie-wc {
     max-width: 30rem;
 }
 
-.resource-action {
+.resource-action,
+.semester-card button,
+.subject-card button,
+a.pyq-download-btn,
+#pdf-modal-download,
+#support-popup-later {
     position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.6rem;
-    min-height: 3rem;
     overflow: hidden;
     border: 1px solid rgba(167, 139, 250, 0.36);
     border-radius: 8px;
     background: rgba(167, 139, 250, 0.15);
     color: #ede9fe;
     cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: 800;
-    padding: 0.85rem 1.15rem;
     box-shadow: inset 0 0 0 1px rgba(167, 139, 250, 0.08), 0 14px 30px rgba(167, 139, 250, 0.08);
     -webkit-tap-highlight-color: transparent;
     transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
-.resource-action::after {
+.resource-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding: 0.85rem 1.15rem;
+}
+
+#support-popup-now,
+#razorpay-btn,
+#razorpay-btn-secondary,
+.contact-form button[type="submit"] {
+    position: relative;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.resource-action::after,
+.semester-card button::after,
+.subject-card button::after,
+a.pyq-download-btn::after,
+#pdf-modal-download::after,
+#support-popup-now::after,
+#support-popup-later::after,
+#razorpay-btn::after,
+#razorpay-btn-secondary::after,
+.contact-form button[type="submit"]::after {
     content: "";
     position: absolute;
     inset: 50%;
@@ -366,7 +392,16 @@ dotlottie-wc {
     pointer-events: none;
 }
 
-.resource-action > span {
+.resource-action > span,
+.semester-card button > span,
+.subject-card button > span,
+a.pyq-download-btn > span,
+#pdf-modal-download > span,
+#support-popup-now > span,
+#support-popup-later > span,
+#razorpay-btn > span,
+#razorpay-btn-secondary > span,
+.contact-form button[type="submit"] > span {
     position: relative;
     z-index: 1;
 }
@@ -376,7 +411,12 @@ dotlottie-wc {
     transition: transform 180ms ease;
 }
 
-.resource-action:hover {
+.resource-action:hover,
+.semester-card button:hover,
+.subject-card button:hover,
+a.pyq-download-btn:hover,
+#pdf-modal-download:hover,
+#support-popup-later:hover {
     border-color: #a78bfa;
     background: rgba(167, 139, 250, 0.92);
     color: #0a0012;
@@ -384,12 +424,30 @@ dotlottie-wc {
     box-shadow: 0 16px 34px rgba(167, 139, 250, 0.18);
 }
 
-.resource-action:active {
+.resource-action:active,
+.semester-card button:active,
+.subject-card button:active,
+a.pyq-download-btn:active,
+#pdf-modal-download:active,
+#support-popup-now:active,
+#support-popup-later:active,
+#razorpay-btn:active,
+#razorpay-btn-secondary:active,
+.contact-form button[type="submit"]:active {
     transform: scale(0.96);
 }
 
-.resource-action.is-clicked::after {
-    animation: resourceTapPulse 420ms ease-out;
+.resource-action.is-clicked::after,
+.semester-card button.is-clicked::after,
+.subject-card button.is-clicked::after,
+a.pyq-download-btn.is-clicked::after,
+#pdf-modal-download.is-clicked::after,
+#support-popup-now.is-clicked::after,
+#support-popup-later.is-clicked::after,
+#razorpay-btn.is-clicked::after,
+#razorpay-btn-secondary.is-clicked::after,
+.contact-form button[type="submit"].is-clicked::after {
+    animation: siteButtonTapPulse 360ms ease-out;
 }
 
 .resource-action:hover .material-symbols-outlined {

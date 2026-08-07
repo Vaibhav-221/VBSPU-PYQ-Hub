@@ -1,17 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const playResourceClick = (button, callback) => {
+  const actionSelector = [
+    ".resource-action",
+    ".semester-card button",
+    ".subject-card button",
+    ".pyq-download-btn",
+    "#pdf-modal-download",
+    "#support-popup-now",
+    "#support-popup-later",
+    "#razorpay-btn",
+    "#razorpay-btn-secondary",
+    ".contact-form button[type='submit']"
+  ].join(",");
+
+  const clearSiteButtonTap = (button) => {
+    button.classList.remove("is-clicked");
+    button.blur();
+  };
+
+  const playSiteButtonTap = (button, callback) => {
     button.classList.remove("is-clicked");
     void button.offsetWidth;
     button.classList.add("is-clicked");
-    window.setTimeout(callback, 160);
+
+    if (typeof callback === "function") {
+      window.setTimeout(() => {
+        button.blur();
+        callback();
+      }, 180);
+    }
   };
+
+  window.playSiteButtonTap = playSiteButtonTap;
+
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest(actionSelector);
+    if (!button || button.disabled) return;
+    playSiteButtonTap(button);
+  });
+
+  document.addEventListener("animationend", (event) => {
+    if (event.animationName === "siteButtonTapPulse") {
+      clearSiteButtonTap(event.target);
+    }
+  });
+
+  window.addEventListener("pageshow", () => {
+    document.querySelectorAll(".is-clicked").forEach(clearSiteButtonTap);
+  });
 
   // PYQs button in hero section
   const pyqsBtn = document.querySelector(".b1");
   if (pyqsBtn) {
     pyqsBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      playResourceClick(pyqsBtn, () => {
+      playSiteButtonTap(pyqsBtn, () => {
         window.location.href = "semester.html";
       });
     });
@@ -20,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btnb2) {
     btnb2.addEventListener("click", (event) => {
       event.preventDefault();
-      playResourceClick(btnb2, () => {
+      playSiteButtonTap(btnb2, () => {
         window.location.href = "maintinance.html";
       });
     });

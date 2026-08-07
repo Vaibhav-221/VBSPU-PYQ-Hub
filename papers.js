@@ -56,7 +56,7 @@ if (snapshot.empty) {
         <h3 class="text-base font-bold text-white mb-1">${data.title || "Untitled PYQ"}</h3>
         <p class="text-xs uppercase tracking-widest font-semibold text-[#a1a1aa] mb-6">${data.year ? data.year + " · " : ""}Semester ${semester}</p>
         <a href="${data.url}" target="_blank" data-href="${data.url}"
-  class="pyq-download-btn mt-auto w-full bg-[#18181b] border border-[#27272a] group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all duration-300 flex items-center justify-center gap-1.5">
+  class="pyq-download-btn mt-auto w-full bg-[#a78bfa]/15 border border-[#a78bfa]/35 group-hover:bg-[#a78bfa] group-hover:text-[#0a0012] group-hover:border-[#a78bfa] text-[#ede9fe] px-5 py-2.5 rounded-lg font-bold text-xs transition-all duration-300 flex items-center justify-center gap-1.5">
           <span>Download PDF</span>
           <span class="material-symbols-outlined text-sm">download</span>
         </a>
