@@ -196,7 +196,7 @@
                             <h3>PYQs are here</h3>
                             <p>Browse authentic VBSPU previous year question papers by course, semester, and subject.
                             </p>
-                            <button class="b1 resource-action">
+                            <button type="button" class="b1 resource-action bg-[#a78bfa]/15 border-[#a78bfa]/35 text-[#ede9fe] active:scale-95">
                                 <span>Explore PYQs</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
                             </button>
@@ -217,7 +217,7 @@
                             <span class="resource-card-label">Notes and materials</span>
                             <h3>Access Study Materials</h3>
                             <p>Find useful notes, references, and preparation material for your university courses.</p>
-                            <button class="b2 resource-action">
+                            <button type="button" class="b2 resource-action bg-[#a78bfa]/15 border-[#a78bfa]/35 text-[#ede9fe] active:scale-95">
                                 <span>Study Materials</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
                             </button>
@@ -230,17 +230,17 @@
         <!-- ========================================== -->
         <!-- Resource Explorer (new)                     -->
         <!-- ========================================== -->
-        <section id="resources-explorer" class="py-16 md:py-20 bg-[#0f0f12] border-b border-[#27272a">
+        <section id="resources-explorer" class="py-16 md:py-20 bg-[#0f0f12] border-b border-[#27272a]">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- ========================================== -->
                 <!-- Need Assistance Section                    -->
                 <!-- ========================================== -->
-                <section id="need-assistance" class="py-16 md:py-24 bg-[#09090b] border-b border-[#27272a]">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
+                <section id="need-assistance"
+                    class="mb-10 md:mb-12 rounded-lg border border-[#27272a] bg-[#09090b] px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(360px,0.72fr)] gap-8 lg:gap-12 items-center">
 
                             <!-- Left Info Column -->
-                            <div class="space-y-8">
+                            <div class="space-y-6">
                                 <div class="max-w-xl">
                                     <div
                                         class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold mb-4">
@@ -249,22 +249,22 @@
                                     </div>
 
                                     <h2
-                                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
+                                        class="text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-tight text-white mb-3 leading-tight">
                                         Need Assistance?
                                     </h2>
 
-                                    <p class="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
+                                    <p class="text-sm sm:text-base text-[#a1a1aa] leading-relaxed max-w-lg">
                                         Send your query, suggestion, or resource request. We will review it and respond
                                         as soon as possible.
                                     </p>
                                 </div>
 
                                 <!-- Contact Methods -->
-                                <div class="space-y-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
                                     <div
-                                        class="flex items-start gap-4 p-4 bg-[#121215] border border-[#27272a] rounded-2xl">
+                                        class="flex items-start gap-3 p-3 bg-[#121215] border border-[#27272a] rounded-lg">
                                         <div
-                                            class="w-12 h-12 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            class="w-10 h-10 bg-[#18181b] border border-[#27272a] rounded-lg flex items-center justify-center text-[#a78bfa] shrink-0">
                                             <span class="material-symbols-outlined">mail</span>
                                         </div>
 
@@ -280,9 +280,9 @@
                                     </div>
 
                                     <div
-                                        class="flex items-start gap-4 p-4 bg-[#121215] border border-[#27272a] rounded-2xl">
+                                        class="flex items-start gap-3 p-3 bg-[#121215] border border-[#27272a] rounded-lg">
                                         <div
-                                            class="w-12 h-12 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            class="w-10 h-10 bg-[#18181b] border border-[#27272a] rounded-lg flex items-center justify-center text-[#a78bfa] shrink-0">
                                             <span class="material-symbols-outlined">language</span>
                                         </div>
 
@@ -300,7 +300,7 @@
                                 </div>
 
                                 <!-- Personal Links -->
-                                <div class="pt-1">
+                                <div class="pt-0">
                                     <p class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa] mb-3">
                                         Connect With Me
                                     </p>
@@ -308,18 +308,18 @@
                                     <div class="flex items-center gap-3">
                                         <a href="#" target="_blank" rel="noopener noreferrer"
                                             aria-label="GitHub profile"
-                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-lg flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors active:scale-95">
                                             <i class="fa-brands fa-github text-lg"></i>
                                         </a>
 
                                         <a href="#" target="_blank" rel="noopener noreferrer"
                                             aria-label="LinkedIn profile"
-                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-lg flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors active:scale-95">
                                             <i class="fa-brands fa-linkedin-in text-lg"></i>
                                         </a>
 
                                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X profile"
-                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-lg flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors active:scale-95">
                                             <i class="fa-brands fa-x-twitter text-lg"></i>
                                         </a>
                                     </div>
@@ -328,17 +328,17 @@
 
                             <!-- Right Form Column -->
                             <div
-                                class="bg-[#121215] p-6 sm:p-8 lg:p-10 rounded-2xl border border-[#27272a] shadow-2xl shadow-black/30">
-                                <div class="mb-6">
-                                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">
+                                class="w-full max-w-md lg:ml-auto bg-[#121215] p-5 sm:p-6 rounded-lg border border-[#27272a] shadow-2xl shadow-black/30">
+                                <div class="mb-5">
+                                    <h3 class="text-lg sm:text-xl font-extrabold text-white">
                                         Send a Message
                                     </h3>
                                     <p class="mt-2 text-sm text-[#a1a1aa] leading-relaxed">
-                                        Fill in the details below and your message will be delivered through EmailJS.
+                                        Fill in the details below and we will get back to you.
                                     </p>
                                 </div>
 
-                                <form id="assist-form" class="contact-form space-y-5">
+                                <form id="assist-form" class="contact-form space-y-4">
                                     <div class="space-y-1.5">
                                         <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
                                             for="assist-name">
@@ -346,7 +346,7 @@
                                         </label>
                                         <input type="text" id="assist-name" name="name"
                                             placeholder="Enter your full name" required
-                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-lg text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
                                     </div>
 
                                     <div class="space-y-1.5">
@@ -356,7 +356,7 @@
                                         </label>
                                         <input type="email" id="assist-email" name="email"
                                             placeholder="example@email.com" required
-                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-lg text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
                                     </div>
 
                                     <div class="space-y-1.5">
@@ -364,13 +364,13 @@
                                             for="assist-message">
                                             Your Message
                                         </label>
-                                        <textarea id="assist-message" name="message" rows="5"
+                                        <textarea id="assist-message" name="message" rows="4"
                                             placeholder="How can we help you?" required
-                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors resize-none"></textarea>
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-lg text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors resize-none"></textarea>
                                     </div>
 
                                     <button type="submit"
-                                        class="w-full min-h-12 py-4 bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-extrabold rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg shadow-[#a78bfa]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                                        class="w-full min-h-12 py-3.5 bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-extrabold rounded-lg transition-all uppercase tracking-widest text-xs shadow-lg shadow-[#a78bfa]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
                                         <span data-btn-text>Send Message</span>
                                         <span data-btn-spinner style="display:none;" class="items-center gap-2">
                                             <i class="fa-solid fa-spinner fa-spin"></i>
@@ -381,7 +381,6 @@
                             </div>
 
                         </div>
-                    </div>
                 </section>
 
 

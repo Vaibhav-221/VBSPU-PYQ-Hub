@@ -1,16 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const playResourceClick = (button, callback) => {
+    button.classList.remove("is-clicked");
+    void button.offsetWidth;
+    button.classList.add("is-clicked");
+    window.setTimeout(callback, 160);
+  };
 
   // PYQs button in hero section
   const pyqsBtn = document.querySelector(".b1");
   if (pyqsBtn) {
-    pyqsBtn.addEventListener("click", () => {
-      window.location.href = "semester.html";
+    pyqsBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      playResourceClick(pyqsBtn, () => {
+        window.location.href = "semester.html";
+      });
     });
   }
   const btnb2 = document.querySelector(".b2");
   if (btnb2) {
-    btnb2.addEventListener("click", () => {
-      window.location.href = "maintinance.html";
+    btnb2.addEventListener("click", (event) => {
+      event.preventDefault();
+      playResourceClick(btnb2, () => {
+        window.location.href = "maintinance.html";
+      });
     });
   }
 
