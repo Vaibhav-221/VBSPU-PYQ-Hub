@@ -7,6 +7,8 @@
     <title>VBSPU PYQ Hub</title>
 
     <!-- Google Font (Stylish + Professional) -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="contact-toast.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Geist:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
@@ -58,12 +60,11 @@
         </ul>
 
         <!-- Mobile Support us btn added (new, hooks left for script.js) -->
-        <button id="mobile-menu-btn" class="md:hidden  nav-support"
-            aria-label="Toggle menu">
-           <a href="support.html"
-                    class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-4 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
-                    Support Us
-                </a>
+        <button id="mobile-menu-btn" class="md:hidden  nav-support" aria-label="Toggle menu">
+            <a href="support.html"
+                class="bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-bold text-xs px-4 py-2.5 rounded-lg transition-all shadow-lg shadow-[#a78bfa]/20 active:scale-95">
+                Support Us
+            </a>
         </button>
     </nav>
 
@@ -176,7 +177,7 @@
                 <div class="resource-section-header">
                     <span class="resource-eyebrow">Academic resources</span>
                     <h2>Choose what you need next</h2>
-                  
+
                 </div>
 
                 <div class="resource-card-grid">
@@ -193,7 +194,8 @@
                         <div class="card-content resource-card-content">
                             <span class="resource-card-label">Previous papers</span>
                             <h3>PYQs are here</h3>
-                            <p>Browse authentic VBSPU previous year question papers by course, semester, and subject.</p>
+                            <p>Browse authentic VBSPU previous year question papers by course, semester, and subject.
+                            </p>
                             <button class="b1 resource-action">
                                 <span>Explore PYQs</span>
                                 <span class="material-symbols-outlined">arrow_forward</span>
@@ -231,127 +233,149 @@
         <section id="resources-explorer" class="py-16 md:py-20 bg-[#0f0f12] border-b border-[#27272a">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- ========================================== -->
-                <!-- Need Assistance Section                     -->
+                <!-- Need Assistance Section                    -->
                 <!-- ========================================== -->
                 <section id="need-assistance" class="py-16 md:py-24 bg-[#09090b] border-b border-[#27272a]">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                        <div class="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-start">
 
                             <!-- Left Info Column -->
                             <div class="space-y-8">
-                                <div>
-                                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Need Assistance?
+                                <div class="max-w-xl">
+                                    <div
+                                        class="inline-flex items-center gap-2 px-3 py-1 bg-[#18181b] border border-[#27272a] text-[#a78bfa] rounded-full text-xs font-semibold mb-4">
+                                        <span class="material-symbols-outlined text-sm">support_agent</span>
+                                        <span>Student Support</span>
+                                    </div>
+
+                                    <h2
+                                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4">
+                                        Need Assistance?
                                     </h2>
-                                    
+
+                                    <p class="text-sm sm:text-base text-[#a1a1aa] leading-relaxed">
+                                        Send your query, suggestion, or resource request. We will review it and respond
+                                        as soon as possible.
+                                    </p>
                                 </div>
 
                                 <!-- Contact Methods -->
-                                <div class="space-y-6">
-
-                                    <div class="flex items-start gap-4">
+                                <div class="space-y-4">
+                                    <div
+                                        class="flex items-start gap-4 p-4 bg-[#121215] border border-[#27272a] rounded-2xl">
                                         <div
-                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            class="w-12 h-12 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
                                             <span class="material-symbols-outlined">mail</span>
                                         </div>
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
-                                                Email Support</p>
-                                            <a href="mailto:vc_vbspuniversity@rediffmail.com"
+
+                                        <div class="min-w-0">
+                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-1">
+                                                Email Support
+                                            </p>
+                                            <a href="mailto:vaibhavsinghcbm@gmail.com"
                                                 class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors break-all">
-                                                vc_vbspuniversity@rediffmail.com
+                                                vaibhavsinghcbm@gmail.com
                                             </a>
                                         </div>
                                     </div>
 
-                                    <div class="flex items-start gap-4">
+                                    <div
+                                        class="flex items-start gap-4 p-4 bg-[#121215] border border-[#27272a] rounded-2xl">
                                         <div
-                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
-                                            <span class="material-symbols-outlined">call</span>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
-                                                Phone Assistance</p>
-                                            <a href="tel:+9105452252244"
-                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors">
-                                                +91 05452-252244
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="flex items-start gap-4">
-                                        <div
-                                            class="w-12 h-12 bg-[#121215] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
+                                            class="w-12 h-12 bg-[#18181b] border border-[#27272a] rounded-xl flex items-center justify-center text-[#a78bfa] shrink-0">
                                             <span class="material-symbols-outlined">language</span>
                                         </div>
-                                        <div>
-                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-0.5">
-                                                Official Website</p>
-                                            <a href="http://www.vbspu.ac.in" target="_blank" rel="noopener noreferrer"
-                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors">
+
+                                        <div class="min-w-0">
+                                            <p class="text-xs font-bold uppercase tracking-wider text-[#a78bfa] mb-1">
+                                                Official Website
+                                            </p>
+                                            <a href="https://www.vbspu.ac.in/en" target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="text-sm sm:text-base text-white font-medium hover:text-[#a78bfa] transition-colors break-all">
                                                 www.vbspu.ac.in
                                             </a>
                                         </div>
                                     </div>
-
                                 </div>
 
-                                <!-- Social Links -->
-                                <div class="pt-2 flex items-center gap-3">
-                                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank"
-                                        rel="noopener"
-                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">FB</a>
-                                    <a href="https://x.com/vbspu_official" target="_blank" rel="noopener"
-                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">TW</a>
-                                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener"
-                                        class="w-10 h-10 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors font-bold text-xs">IG</a>
+                                <!-- Personal Links -->
+                                <div class="pt-1">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa] mb-3">
+                                        Connect With Me
+                                    </p>
+
+                                    <div class="flex items-center gap-3">
+                                        <a href="#" target="_blank" rel="noopener noreferrer"
+                                            aria-label="GitHub profile"
+                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            <i class="fa-brands fa-github text-lg"></i>
+                                        </a>
+
+                                        <a href="#" target="_blank" rel="noopener noreferrer"
+                                            aria-label="LinkedIn profile"
+                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            <i class="fa-brands fa-linkedin-in text-lg"></i>
+                                        </a>
+
+                                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X profile"
+                                            class="w-11 h-11 border border-[#27272a] bg-[#121215] text-[#a1a1aa] rounded-xl flex items-center justify-center hover:bg-[#a78bfa] hover:text-[#0a0012] hover:border-[#a78bfa] transition-colors">
+                                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Right Form Column -->
-                            <div class="bg-[#121215] p-6 sm:p-8 lg:p-10 rounded-2xl border border-[#27272a] shadow-2xl">
-                                <form id="assist-form" class="space-y-5">
-                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                        <div class="space-y-1.5">
-                                            <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
-                                                for="assist-name">Full Name</label>
-                                            <input type="text" id="assist-name" name="name" placeholder="Student Name"
-                                                required
-                                                class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
-                                        </div>
-                                        <div class="space-y-1.5">
-                                            <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
-                                                for="assist-email">Email Address</label>
-                                            <input type="email" id="assist-email" name="email"
-                                                placeholder="example@email.com" required
-                                                class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
-                                        </div>
+                            <div
+                                class="bg-[#121215] p-6 sm:p-8 lg:p-10 rounded-2xl border border-[#27272a] shadow-2xl shadow-black/30">
+                                <div class="mb-6">
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-white">
+                                        Send a Message
+                                    </h3>
+                                    <p class="mt-2 text-sm text-[#a1a1aa] leading-relaxed">
+                                        Fill in the details below and your message will be delivered through EmailJS.
+                                    </p>
+                                </div>
+
+                                <form id="assist-form" class="contact-form space-y-5">
+                                    <div class="space-y-1.5">
+                                        <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
+                                            for="assist-name">
+                                            Full Name
+                                        </label>
+                                        <input type="text" id="assist-name" name="name"
+                                            placeholder="Enter your full name" required
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
                                     </div>
 
                                     <div class="space-y-1.5">
                                         <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
-                                            for="assist-dept">Department / Course</label>
-                                        <select id="assist-dept" name="department"
-                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white transition-colors">
-                                            <option>B.Tech Engineering</option>
-                                            <option>B.Sc Science</option>
-                                            <option>Commerce & Management</option>
-                                            <option>BCA / MCA</option>
-                                            <option>Other Departments</option>
-                                        </select>
+                                            for="assist-email">
+                                            Email Address
+                                        </label>
+                                        <input type="email" id="assist-email" name="email"
+                                            placeholder="example@email.com" required
+                                            class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors">
                                     </div>
 
                                     <div class="space-y-1.5">
                                         <label class="text-xs font-bold uppercase tracking-widest text-[#a1a1aa]"
-                                            for="assist-message">Your Message</label>
-                                        <textarea id="assist-message" name="message" rows="4"
-                                            placeholder="How can we help you find your question papers or study material?"
-                                            required
+                                            for="assist-message">
+                                            Your Message
+                                        </label>
+                                        <textarea id="assist-message" name="message" rows="5"
+                                            placeholder="How can we help you?" required
                                             class="w-full px-4 py-3 bg-[#18181b] border border-[#27272a] focus:border-[#a78bfa] focus:outline-none rounded-xl text-xs text-white placeholder:text-[#a1a1aa]/40 transition-colors resize-none"></textarea>
                                     </div>
 
                                     <button type="submit"
-                                        class="w-full py-4 bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-extrabold rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg shadow-[#a78bfa]/20 active:scale-[0.98]">
-                                        Send Message
+                                        class="w-full min-h-12 py-4 bg-[#a78bfa] hover:brightness-110 text-[#0a0012] font-extrabold rounded-xl transition-all uppercase tracking-widest text-xs shadow-lg shadow-[#a78bfa]/20 active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                                        <span data-btn-text>Send Message</span>
+                                        <span data-btn-spinner style="display:none;" class="items-center gap-2">
+                                            <i class="fa-solid fa-spinner fa-spin"></i>
+                                            Sending...
+                                        </span>
                                     </button>
                                 </form>
                             </div>
@@ -359,7 +383,6 @@
                         </div>
                     </div>
                 </section>
-
 
 
                 <div id="resources-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -415,7 +438,8 @@
                 </div>
                 <div>
                     <h2>VBSPU PYQ Hub</h2>
-                    <p>Accessible academic resources, authentic previous year papers, and exam-ready study support for VBSPU students.</p>
+                    <p>Accessible academic resources, authentic previous year papers, and exam-ready study support for
+                        VBSPU students.</p>
                 </div>
             </div>
 
@@ -432,14 +456,19 @@
             <div class="contact footer-column">
                 <h3>Contact</h3>
                 <ul>
-                    <li><span class="material-symbols-outlined">mail</span><a href="mailto:vc_vbspuniversity@rediffmail.com">vc_vbspuniversity@rediffmail.com</a></li>
-                    <li><span class="material-symbols-outlined">call</span><a href="tel:+9105452252244">+91 05452-252244</a></li>
-                    <li><span class="material-symbols-outlined">language</span><a href="https://www.vbspu.ac.in/en" target="_blank" rel="noopener noreferrer">www.vbspu.ac.in</a></li>
+                    <li><span class="material-symbols-outlined">mail</span><a
+                            href="mailto:vc_vbspuniversity@rediffmail.com">vc_vbspuniversity@rediffmail.com</a></li>
+                    <li><span class="material-symbols-outlined">call</span><a href="tel:+9105452252244">+91
+                            05452-252244</a></li>
+                    <li><span class="material-symbols-outlined">language</span><a href="https://www.vbspu.ac.in/en"
+                            target="_blank" rel="noopener noreferrer">www.vbspu.ac.in</a></li>
                 </ul>
                 <div class="socials footer-socials" aria-label="Social links">
-                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://www.facebook.com/Vbspuofficial?mibextid=ZbWKwL" target="_blank" rel="noopener"
+                        aria-label="Facebook">FB</a>
                     <a href="https://x.com/vbspu_official" target="_blank" rel="noopener" aria-label="X">X</a>
-                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://www.instagram.com/vbspu.jaunpur/" target="_blank" rel="noopener"
+                        aria-label="Instagram">IG</a>
                 </div>
             </div>
 
@@ -459,8 +488,10 @@
 
         <div class="footer-bottom">
             <span>&copy; 2025 VBSPU PYQs Hub. All rights reserved.</span>
-            <span>Designed & Developed by <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank" rel="noopener noreferrer">Vaibhav Singh</a></span>
-            <span>Advertised by <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank" rel="noopener noreferrer">Vansh Gupta</a></span>
+            <span>Designed & Developed by <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank"
+                    rel="noopener noreferrer">Vaibhav Singh</a></span>
+            <span>Advertised by <a href="https://www.linkedin.com/in/vaibhav-singh-a9200a2b9" target="_blank"
+                    rel="noopener noreferrer">Vansh Gupta</a></span>
         </div>
     </footer>
 
@@ -492,6 +523,7 @@
 
     <!-- External JS only, exactly as in your original project -->
     <script src="script.js"></script>
+    <script src="contact.js" ></script>
 </body>
 
 </html>

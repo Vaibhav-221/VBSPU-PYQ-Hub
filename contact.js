@@ -3,15 +3,26 @@
   const EMAILJS_SERVICE_ID = "service_ldsch2g";
   const EMAILJS_TEMPLATE_ID = "template_2lmfazk";
 
+  function getButtonParts(button) {
+    return {
+      text: button.querySelector("[data-btn-text]") || button.querySelector("#btn-text"),
+      spinner: button.querySelector("[data-btn-spinner]") || button.querySelector("#btn-spinner")
+    };
+  }
+
   function setButtonLoading(button, isLoading) {
-    const btnText = document.getElementById("btn-text");
-    const btnSpinner = document.getElementById("btn-spinner");
+    const parts = getButtonParts(button);
 
     button.disabled = isLoading;
     button.setAttribute("aria-busy", String(isLoading));
 
-    if (btnText) btnText.style.display = isLoading ? "none" : "inline";
-    if (btnSpinner) btnSpinner.style.display = isLoading ? "inline-flex" : "none";
+    if (parts.text) {
+      parts.text.style.display = isLoading ? "none" : "inline";
+    }
+
+    if (parts.spinner) {
+      parts.spinner.style.display = isLoading ? "inline-flex" : "none";
+    }
   }
 
   function getEmailJSErrorMessage(error) {
@@ -23,6 +34,14 @@
 
     if (String(error && error.status) === "412" || /invalid grant/i.test(rawMessage)) {
       return "Email service is not connected. Please reconnect Gmail in EmailJS and try again.";
+    }
+
+    if (String(error && error.status) === "400") {
+      return "Email details are missing or incorrect. Please check your EmailJS service, template, and form fields.";
+    }
+
+    if (String(error && error.status) === "429") {
+      return "Too many requests. Please wait a moment before sending again.";
     }
 
     return "Something went wrong. Please try again in a moment.";
@@ -71,27 +90,23 @@
     toast.append(icon, body, closeButton, progress);
     container.appendChild(toast);
 
-    const removeToast = () => {
+    const removeToast = function () {
       toast.classList.add("toast-hide");
-      window.setTimeout(() => toast.remove(), 350);
+      window.setTimeout(function () {
+        toast.remove();
+      }, 350);
     };
 
     closeButton.addEventListener("click", removeToast);
     window.setTimeout(removeToast, 4000);
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("contact-form");
-    const sendButton = document.getElementById("send-btn");
+  function attachEmailForm(form) {
+    const sendButton = form.querySelector("button[type='submit']");
 
-    if (!form || !sendButton) return;
+    if (!sendButton || form.dataset.emailjsReady === "true") return;
 
-    if (!window.emailjs) {
-      showToast("error", "Email Not Ready", "EmailJS did not load. Check your internet connection or script URL.");
-      return;
-    }
-
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    form.dataset.emailjsReady = "true";
 
     form.addEventListener("submit", function (event) {
       event.preventDefault();
@@ -113,5 +128,19 @@
           setButtonLoading(sendButton, false);
         });
     });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll("#contact-form, #assist-form, .contact-form");
+
+    if (!forms.length) return;
+
+    if (!window.emailjs) {
+      showToast("error", "Email Not Ready", "EmailJS did not load. Check your internet connection or script URL.");
+      return;
+    }
+
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+    forms.forEach(attachEmailForm);
   });
 })();
