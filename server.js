@@ -9,6 +9,23 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use((req, res, next) => {
+  const allowedOrigins = [
+    'https://vbspu-pyq-hub.online',
+    'https://www.vbspu-pyq-hub.online'
+  ];
+  const origin = req.headers.origin;
+  if (origin && allowedOrigins.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+  next();
+});
+
 if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
   console.warn('Razorpay credentials are missing. Set RAZORPAY_KEY_ID and RAZORPAY_KEY_SECRET in your .env file.');
 }
