@@ -379,6 +379,27 @@
         statusEl.className = isError ? 'mt-3 text-xs text-red-400' : 'mt-3 text-xs text-muted';
       };
 
+      const getApiBaseUrl = () => {
+        const customBase = 'https://api.vbspu-pyq-hub.online';
+        if (customBase) return customBase.replace(/\/$/, '');
+
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+          return '';
+        }
+
+        const host = window.location.hostname.replace(/^www\./i, '');
+        if (host.startsWith('api.')) {
+          return `${window.location.protocol}//${host}`;
+        }
+
+        return `${window.location.protocol}//api.${host}`;
+      };
+
+      const apiUrl = (path) => {
+        const base = getApiBaseUrl();
+        return `${base}${path.startsWith('/') ? path : `/${path}`}`;
+      };
+
       const openCheckout = async () => {
         if (!window.Razorpay) {
           setStatus('Razorpay failed to load. Please refresh the page and try again.', true);
@@ -387,7 +408,7 @@
 
         try {
           setStatus('Creating secure payment session...');
-          const configResponse = await fetch('/api/config');
+          const configResponse = await fetch(apiUrl('/api/config'));
           const configText = await configResponse.text();
           let configData = {};
           try { configData = JSON.parse(configText); } catch (err) {
@@ -399,7 +420,7 @@
             throw new Error('Razorpay public key is not configured.');
           }
 
-          const response = await fetch('/api/create-order', {
+          const response = await fetch(apiUrl('/api/create-order'), {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ amount: 1900, currency: 'INR', receipt: 'support-19' })
@@ -426,7 +447,7 @@
             description: 'Support the project',
             handler: async function (response) {
               try {
-                const verifyResponse = await fetch('/api/verify-payment', {
+                const verifyResponse = await fetch(apiUrl('/api/verify-payment'), {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({
