@@ -388,7 +388,11 @@
         try {
           setStatus('Creating secure payment session...');
           const configResponse = await fetch('/api/config');
-          const configData = await configResponse.json();
+          const configText = await configResponse.text();
+          let configData = {};
+          try { configData = JSON.parse(configText); } catch (err) {
+            throw new Error('Invalid JSON from /api/config: ' + (configText || '').slice(0,200));
+          }
           const keyId = configResponse.ok && configData.keyId ? configData.keyId : '';
 
           if (!keyId) {
@@ -401,7 +405,14 @@
             body: JSON.stringify({ amount: 1900, currency: 'INR', receipt: 'support-19' })
           });
 
-          const data = await response.json();
+          const respText = await response.text();
+          let data;
+          try {
+            data = JSON.parse(respText);
+          } catch (err) {
+            throw new Error('Invalid JSON from /api/create-order: ' + (respText || '').slice(0,300));
+          }
+
           if (!response.ok) {
             throw new Error(data.error || 'Unable to create order.');
           }
@@ -425,7 +436,12 @@
                   })
                 });
 
-                const verifyData = await verifyResponse.json();
+                const verifyText = await verifyResponse.text();
+                let verifyData = {};
+                try { verifyData = JSON.parse(verifyText); } catch (err) {
+                  throw new Error('Invalid JSON from /api/verify-payment: ' + (verifyText || '').slice(0,300));
+                }
+
                 if (!verifyResponse.ok || !verifyData.success) {
                   throw new Error(verifyData.error || 'Payment verification failed.');
                 }
