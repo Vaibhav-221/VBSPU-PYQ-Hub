@@ -528,7 +528,7 @@ a.pyq-download-btn.is-clicked::after,
         linear-gradient(135deg, rgba(167, 139, 250, 0.08), transparent 32%),
         #0f0f12;
     color: #fafafa;
-    padding: 4.5rem 1rem 5.75rem;
+    padding: 4.5rem 1rem 4.75rem;
 }
 
 .footer-section::before {
@@ -738,7 +738,7 @@ a.pyq-download-btn.is-clicked::after,
 
 @media (min-width: 768px) {
     .footer-section {
-        padding: 5.5rem 1.5rem 3.5rem;
+        padding: 5.5rem 1.5rem 2.5rem;
     }
 
     .footer-inner {
