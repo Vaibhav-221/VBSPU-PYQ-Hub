@@ -5,6 +5,8 @@
   "main": "contact.js",
   "scripts": {
     "start": "node server.js",
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

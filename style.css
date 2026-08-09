@@ -772,7 +772,8 @@ a.pyq-download-btn.is-clicked::after,
     .footer-bottom {
         align-items: center;
         flex-direction: column;
-        gap: 1px;
+        text-align: center;
+        gap: 0.5rem;
     }
 }
 
@@ -793,4 +794,48 @@ a.pyq-download-btn.is-clicked::after,
     font-size: 1rem;
     line-height: 1.5rem;
   }
+}
+
+/* ========================================== */
+/* Privacy Policy Container & Card Spacing     */
+/* ========================================== */
+.privacy-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.25rem !important; /* 36px spacing on mobile */
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 640px) {
+    .privacy-container {
+        gap: 2.75rem !important; /* 44px spacing on tablet */
+    }
+}
+
+@media (min-width: 768px) {
+    .privacy-container {
+        gap: 3.25rem !important; /* 52px spacing on desktop */
+    }
+}
+
+.privacy-card {
+    background-color: #121215;
+    border: 1px solid #27272a;
+    border-radius: 1rem;
+    padding: 1.25rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (min-width: 640px) {
+    .privacy-card {
+        padding: 1.5rem 1.75rem;
+    }
+}
+
+.privacy-card:hover {
+    border-color: rgba(167, 139, 250, 0.4);
+    box-shadow: 0 12px 30px -5px rgba(167, 139, 250, 0.1);
 }
