@@ -816,7 +816,7 @@ a.pyq-download-btn.is-clicked::after,
 
 @media (min-width: 768px) {
     .privacy-container {
-        gap: 3.25rem !important; /* 52px spacing on desktop */
+        gap: 2.25rem !important; /* 52px spacing on desktop */
     }
 }
 
