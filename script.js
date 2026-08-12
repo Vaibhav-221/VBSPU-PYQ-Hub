@@ -101,4 +101,107 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ── Newsletter subscription (W3 form, no redirect) ──────────────────────
+  function showNewsletterToast(type, title, message) {
+    let container = document.getElementById("toast-container");
+    if (!container) {
+      container = document.createElement("div");
+      container.id = "toast-container";
+      container.setAttribute("aria-live", "polite");
+      container.setAttribute("aria-atomic", "true");
+      document.body.appendChild(container);
+    }
+
+    const toast = document.createElement("div");
+    toast.className = `toast-notif ${type}`;
+    toast.setAttribute("role", type === "success" ? "status" : "alert");
+
+    const icon = document.createElement("div");
+    icon.className = "toast-icon-circle";
+    icon.textContent = type === "success" ? "OK" : "!";
+
+    const body = document.createElement("div");
+    body.className = "toast-body";
+
+    const toastTitle = document.createElement("p");
+    toastTitle.className = "toast-title";
+    toastTitle.textContent = title;
+
+    const toastMsg = document.createElement("p");
+    toastMsg.className = "toast-msg";
+    toastMsg.textContent = message;
+
+    const closeBtn = document.createElement("button");
+    closeBtn.className = "toast-close-btn";
+    closeBtn.type = "button";
+    closeBtn.setAttribute("aria-label", "Close notification");
+    closeBtn.textContent = "x";
+
+    const progress = document.createElement("div");
+    progress.className = "toast-progress";
+
+    body.append(toastTitle, toastMsg);
+    toast.append(icon, body, closeBtn, progress);
+    container.appendChild(toast);
+
+    const removeToast = () => {
+      toast.classList.add("toast-hide");
+      window.setTimeout(() => toast.remove(), 350);
+    };
+
+    closeBtn.addEventListener("click", removeToast);
+    window.setTimeout(removeToast, 4000);
+  }
+
+  const newsletterForm = document.getElementById("newsletter-form");
+  if (newsletterForm) {
+    const submitBtn = newsletterForm.querySelector("button[type='submit']");
+    const emailInput = document.getElementById("footer-email");
+
+    newsletterForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = "0.6";
+      }
+
+      try {
+        const formData = new FormData(newsletterForm);
+        const response = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.success) {
+          showNewsletterToast(
+            "success",
+            "Subscribed!",
+            "You have successfully subscribed. We'll notify you when new papers are uploaded."
+          );
+          if (emailInput) emailInput.value = "";
+        } else {
+          showNewsletterToast(
+            "error",
+            "Subscription Failed",
+            data.message || "Something went wrong. Please try again."
+          );
+        }
+      } catch (err) {
+        showNewsletterToast(
+          "error",
+          "Network Error",
+          "Could not connect. Please check your internet and try again."
+        );
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = "";
+        }
+      }
+    });
+  }
+
 });
