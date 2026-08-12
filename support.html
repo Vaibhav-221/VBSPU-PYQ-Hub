@@ -304,17 +304,24 @@
       </div>
 
       <div class="newsletter footer-column footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Stay updated whenever new exam papers are uploaded.</p>
-        <form id="newsletter-form" class="footer-newsletter-form">
-          <label class="sr-only" for="footer-email">Email address</label>
-          <input id="footer-email" type="email" placeholder="Email address" required>
-          <button type="submit" aria-label="Subscribe">
-            <span class="material-symbols-outlined">send</span>
-          </button>
-        </form>
-      </div>
+                <h3>Newsletter</h3>
+                <p>Stay updated whenever new exam papers are uploaded.</p>
 
+                <form id="newsletter-form" class="footer-newsletter-form" action="https://api.web3forms.com/submit"
+                    method="POST">
+                    <!-- Add your Web3Forms access key here -->
+                    <input type="hidden" name="access_key" value="ced336af-f7fc-4146-818c-e58485ce59fb">
+
+                    <label class="sr-only" for="footer-email">Email address</label>
+
+                    <input id="footer-email" type="email" name="email" placeholder="Email address" required>
+
+                    <button type="submit" aria-label="Subscribe">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+
+                </form>
+            </div>
     </div>
 
     <div class="footer-bottom">
