@@ -35,7 +35,6 @@
 - [Environment Variables](#-environment-variables)
 - [Build and Scripts](#-build--scripts)
 - [SEO and Sitemap](#-seo--sitemap)
-- [Android App](#-android-app)
 - [Contributing](#-contributing)
 - [Credits](#-credits)
 - [License](#-license)
@@ -157,7 +156,6 @@ PYQS Website/
 ├── 🖼️  apple-touch-icon.png    # iOS home screen icon (180x180)
 ├── 🖼️  pyqs.png                # Supplementary PYQ image asset
 ├── 🖼️  Stydy Materials.png     # Study materials section image
-├── 📦 VBSPU PYQ Hub.apk        # Android app APK for direct installation
 │
 ├── 📁 src/
 │   ├── input.css               # Tailwind CSS entry point (@tailwind directives)
@@ -449,19 +447,6 @@ The project is fully SEO-optimized:
 | `/contact.html` | 0.5 |
 | `/support.html` | 0.5 |
 | `/privacy.html` | 0.3 |
-
----
-
-## 📱 Android App
-
-A prebuilt Android APK is included in the repository:
-
-```
-VBSPU PYQ Hub.apk
-```
-
-Students can sideload this on their Android device for a native-like experience.  
-Enable **"Install from unknown sources"** in Android settings before installing.
 
 ---
 
