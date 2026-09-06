@@ -1,4 +1,4 @@
-﻿<h1 align="center">
+<h1 align="center">
   <img src="new_logo.png" width="60" alt="VBSPU PYQ Hub Logo" /><br/>
   VBSPU PYQ Hub
 </h1>
@@ -500,9 +500,11 @@ Contributions are warmly welcome! Here is how you can help:
 This project is licensed under the **ISC License**.
 
 ```
-Copyright © 2025 VBSPU PYQ Hub. All rights reserved.
+Copyright © <current year — auto-updated dynamically via JS> VBSPU PYQ Hub. All rights reserved.
 Designed & Developed by Vaibhav Singh.
 ```
+
+> The copyright year in the footer is **dynamically generated** using `new Date().getFullYear()` — it automatically updates every year across all pages without any manual changes.
 
 ---
 
