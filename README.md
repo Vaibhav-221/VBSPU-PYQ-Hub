@@ -14,7 +14,6 @@
   <a href="https://github.com/Vaibhav-221/VBSPU-PYQ-Hub" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Vaibhav--221%2FVBSPU--PYQ--Hub-181717?style=for-the-badge&logo=github" alt="GitHub Repo" />
   </a>
-  <img src="https://img.shields.io/badge/License-ISC-green?style=for-the-badge" alt="License ISC" />
   <img src="https://img.shields.io/badge/Papers-100%2B-a78bfa?style=for-the-badge" alt="100+ Papers" />
   <img src="https://img.shields.io/badge/Downloads-10k%2B-a78bfa?style=for-the-badge" alt="10k+ Downloads" />
 </p>
@@ -58,7 +57,6 @@ The project was born from the simple idea that every student deserves equal acce
 | Platform | URL |
 |----------|-----|
 | 🌍 Website | [https://www.vbspu-pyq-hub.online](https://www.vbspu-pyq-hub.online) |
-| 📱 Android App | Included in repo as `VBSPU PYQ Hub.apk` |
 | 🏛️ University | [https://www.vbspu.ac.in](https://www.vbspu.ac.in/en) |
 
 ---
