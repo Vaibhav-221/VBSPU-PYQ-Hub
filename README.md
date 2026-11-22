@@ -37,9 +37,10 @@ Free, organized previous year question papers for students of Veer Bahadur Singh
 |---|---|---|
 | `NEXT_PUBLIC_FIREBASE_API_KEY` | Paper archive | Firebase web-app API key |
 | `NEXT_PUBLIC_FIREBASE_PROJECT_ID` | Paper archive | Firestore project ID |
-| `NEXT_PUBLIC_EMAILJS_PUBLIC_KEY` | Contact form | Optional; the existing public key is used if omitted |
-| `NEXT_PUBLIC_EMAILJS_SERVICE_ID` | Contact form | Optional; existing service ID is used if omitted |
-| `NEXT_PUBLIC_EMAILJS_TEMPLATE_ID` | Contact form | Optional; existing template ID is used if omitted |
+| `EMAILJS_PUBLIC_KEY` | Contact form | EmailJS public account key; used only by the server API route |
+| `EMAILJS_SERVICE_ID` | Contact form | EmailJS service ID |
+| `EMAILJS_TEMPLATE_ID` | Contact form | EmailJS template ID; template should include `name`, `email`, and `message` |
+| `EMAILJS_PRIVATE_KEY` | Contact form | Required server-only EmailJS private key; never use a `NEXT_PUBLIC_` prefix |
 | `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` | Newsletter | Create a Web3Forms access key |
 | `RAZORPAY_KEY_ID` | Support payments | Public checkout key ID |
 | `RAZORPAY_KEY_SECRET` | Support payments | Server-only secret; never use a `NEXT_PUBLIC_` prefix |

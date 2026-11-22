@@ -12,7 +12,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -63,6 +63,19 @@ body {
 .nav-link:hover::after,
 .nav-link:focus-visible::after {
   transform: scaleX(1);
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+a:active,
+button:active,
+.interactive-card:active {
+  filter: brightness(0.78) !important;
+  transition-duration: 80ms !important;
 }
 
 .window-control {
