@@ -74,4 +74,12 @@ The original `/index.html`, `/semester.html`, `/subject.html`, `/papers.html`, `
 
 ## Deployment
 
-Deploy as a Node.js Next.js application. Configure the environment variables in the hosting provider, use HTTPS, and set `RAZORPAY_KEY_SECRET` only in the server environment. Update the Firebase settings before expecting paper listings to load.
+Deploy as a Render **Web Service** (not a Static Site). The root-level `render.yaml` configures the service to run `npm ci && npm run build` before `npm start`; this ensures the `.next` production build exists when Next.js starts.
+
+For a service configured manually in the Render dashboard, set:
+
+- **Build Command:** `npm ci && npm run build`
+- **Start Command:** `npm start`
+- **Root Directory:** leave blank (the repository root contains `package.json`)
+
+If the existing Render service is not managed by this Blueprint, update its dashboard commands directly or sync the Blueprint. Configure the environment variables in Render, use HTTPS, and set `RAZORPAY_KEY_SECRET` only in the server environment. Update the Firebase settings before expecting paper listings to load.
