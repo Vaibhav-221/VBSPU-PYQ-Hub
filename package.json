@@ -1,31 +1,35 @@
 {
-  "name": "pyqs-website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "contact.js",
+  "name": "vbspu-pyq-hub",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Free, organized previous year question papers for VBSPU students.",
   "scripts": {
-    "start": "node server.js",
-    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
-    "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Vaibhav-221/VBSPU-PYQ-Hub.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Vaibhav-221/VBSPU-PYQ-Hub/issues"
-  },
-  "homepage": "https://github.com/Vaibhav-221/VBSPU-PYQ-Hub#readme",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "dotenv": "^17.4.2",
-    "express": "^5.2.1",
+    "@emailjs/browser": "^4.4.1",
+    "lucide-react": "^0.468.0",
+    "next": "^16.4.6",
     "razorpay": "^2.9.8",
-    "tailwindcss": "^4.3.3"
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^22.15.30",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.6",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "axios": "^1.21.1",
+    "follow-redirects": "^1.16.1"
   }
 }

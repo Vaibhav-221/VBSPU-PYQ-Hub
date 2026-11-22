@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://www.vbspu-pyq-hub.online/sitemap.xml
