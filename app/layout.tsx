@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-shell";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = "https://www.vbspu-pyq-hub.online";
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <main className="min-h-[65vh]">{children}</main>
         <SiteFooter />
+        <Analytics />
       </body>
     </html>
   );
